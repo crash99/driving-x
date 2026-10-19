@@ -1,36 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' dir='rtl' lang='ku' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="ku" dir="rtl">
 <head>
-    <meta charset='UTF-8'/>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
-    <title><data:blog.pageTitle/></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تاقیکردنەوەی تیۆری هاتوچۆ</title>
     
-    <script type='text/javascript'>
-    //<![CDATA[
-      window.cookieChoices = {
-        showCookieConsentBar: function() {},
-        showCookieConsentDialog: function() {}
-      };
-      window.cookieOptions = {};
-    //]]>
-    </script>
-
-<b:skin><![CDATA[
-      .cookie-choices-info { display: none !important; }
-    ]]></b:skin>
-    
-    <link href='https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: &#39;Vazirmatn&#39;, sans-serif;
+            font-family: 'Vazirmatn', sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
-:root {
+        :root {
             --led-cyan: #00f2fe;
             --led-blue: #4facfe;
             --led-pink: #ff007f;
@@ -40,7 +25,7 @@
             --bg-dark: #080c14;
         }
 
-body {
+        body {
             background-color: var(--bg-dark);
             background-image: 
                 radial-gradient(circle at 50% 10%, rgba(0, 242, 254, 0.08) 0%, transparent 50%),
@@ -56,7 +41,6 @@ body {
             overflow-x: hidden;
         }
 
-/* چێوەی لیدی جوڵاو (Moving Animated LED Border) */
         .app-led-wrapper {
             position: relative;
             width: 100%;
@@ -71,7 +55,7 @@ body {
             margin: auto;
         }
 
-.led-border-glow {
+        .led-border-glow {
             position: absolute;
             width: 250%;
             height: 250%;
@@ -91,7 +75,7 @@ body {
             filter: blur(5px);
         }
 
-.led-border-glow-extra {
+        .led-border-glow-extra {
             position: absolute;
             width: 250%;
             height: 250%;
@@ -112,12 +96,11 @@ body {
             opacity: 0.65;
         }
 
-@keyframes rotate-led {
+        @keyframes rotate-led {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-/* دەفری ناوەوەی ئەپڵیکەیشن */
         .app-container {
             width: 100%;
             background: #0e1628;
@@ -131,7 +114,6 @@ body {
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-/* هێڵی لیدی سەرەوە */
         .led-runner-line {
             height: 3px;
             width: 100%;
@@ -140,12 +122,11 @@ body {
             animation: runner-move 3s ease infinite;
         }
 
-@keyframes runner-move {
+        @keyframes runner-move {
             0% { background-position: 100% 0; }
             100% { background-position: -100% 0; }
         }
 
-/* بەشی سەردێڕ */
         .app-header-bar {
             display: flex;
             align-items: center;
@@ -158,7 +139,7 @@ body {
             position: relative;
         }
 
-.app-header-title {
+        .app-header-title {
             color: #ffffff;
             font-size: 17px;
             font-weight: 800;
@@ -168,14 +149,13 @@ body {
             gap: 8px;
         }
 
-.content-section {
+        .content-section {
             padding: 24px 20px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-/* ستایلی نیمچە بازنە + ناوی کراش */
         .crash-spinner-section {
             display: flex;
             flex-direction: column;
@@ -188,13 +168,13 @@ body {
             cursor: pointer;
         }
 
-.spinner-container {
+        .spinner-container {
             position: relative;
             width: 200px;
             height: 200px;
         }
 
-.spinner-ring {
+        .spinner-ring {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -205,7 +185,7 @@ body {
             animation: spin-ring 2s linear infinite;
         }
 
-.spinner-ring:nth-child(2) {
+        .spinner-ring:nth-child(2) {
             width: 85%;
             height: 85%;
             top: 7.5%;
@@ -215,7 +195,7 @@ body {
             animation: spin-ring 1.5s linear infinite reverse;
         }
 
-.spinner-ring:nth-child(3) {
+        .spinner-ring:nth-child(3) {
             width: 70%;
             height: 70%;
             top: 15%;
@@ -225,12 +205,12 @@ body {
             animation: spin-ring 2.5s linear infinite;
         }
 
-@keyframes spin-ring {
+        @keyframes spin-ring {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-.crash-title {
+        .crash-title {
             font-size: 48px;
             font-weight: 900;
             text-align: center;
@@ -251,21 +231,16 @@ body {
             position: relative;
         }
 
-@keyframes gradient-shift {
+        @keyframes gradient-shift {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
         }
 
-@keyframes glow-pulse {
-            0%, 100% { 
-                filter: brightness(1) drop-shadow(0 0 10px rgba(0, 242, 254, 0.6));
-            }
-            50% { 
-                filter: brightness(1.3) drop-shadow(0 0 25px rgba(255, 0, 127, 0.8));
-            }
+        @keyframes glow-pulse {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 10px rgba(0, 242, 254, 0.6)); }
+            50% { filter: brightness(1.3) drop-shadow(0 0 25px rgba(255, 0, 127, 0.8)); }
         }
 
-/* بەشی ئەکتیڤکردنی سەرەتا (Activation Gate) */
         .activation-box {
             display: none;
             flex-direction: column;
@@ -277,7 +252,7 @@ body {
             padding: 10px 0;
         }
 
-.activation-icon-glow {
+        .activation-icon-glow {
             width: 65px;
             height: 65px;
             border-radius: 50%;
@@ -292,12 +267,12 @@ body {
             animation: lock-pulse 2s infinite alternate;
         }
 
-@keyframes lock-pulse {
+        @keyframes lock-pulse {
             0% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
             100% { transform: scale(1.06); box-shadow: 0 0 25px rgba(0, 242, 254, 0.6); }
         }
 
-.activation-title {
+        .activation-title {
             font-size: 21px;
             font-weight: 900;
             color: #ffffff;
@@ -307,21 +282,21 @@ body {
             -webkit-text-fill-color: transparent;
         }
 
-.activation-subtitle {
+        .activation-subtitle {
             font-size: 14px;
             color: #94a3b8;
             margin-bottom: 22px;
             font-weight: 500;
         }
 
-.activation-input-wrap {
+        .activation-input-wrap {
             position: relative;
             width: 100%;
             max-width: 300px;
             margin-bottom: 12px;
         }
 
-.activation-input-wrap input {
+        .activation-input-wrap input {
             width: 100%;
             padding: 12px 42px 12px 14px;
             border: 1.5px solid rgba(0, 242, 254, 0.4);
@@ -337,12 +312,12 @@ body {
             direction: ltr;
         }
 
-.activation-input-wrap input:focus {
+        .activation-input-wrap input:focus {
             border-color: var(--led-cyan);
             box-shadow: 0 0 20px rgba(0, 242, 254, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
-.toggle-pwd-btn {
+        .toggle-pwd-btn {
             position: absolute;
             left: 10px;
             top: 50%;
@@ -359,11 +334,9 @@ body {
             transition: color 0.2s;
         }
 
-.toggle-pwd-btn:hover {
-            color: #ffffff;
-        }
+        .toggle-pwd-btn:hover { color: #ffffff; }
 
-.activation-msg {
+        .activation-msg {
             width: 100%;
             max-width: 300px;
             min-height: 28px;
@@ -377,7 +350,7 @@ body {
             box-sizing: border-box;
         }
 
-.activation-msg.error {
+        .activation-msg.error {
             display: block;
             background: rgba(239, 68, 68, 0.15);
             border: 1px solid #ef4444;
@@ -385,7 +358,7 @@ body {
             box-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
         }
 
-.activation-msg.success {
+        .activation-msg.success {
             display: block;
             background: rgba(16, 185, 129, 0.15);
             border: 1px solid #10b981;
@@ -393,7 +366,6 @@ body {
             box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
         }
 
-/* بەشی هەڵبژاردنی زمان */
         .language-selector {
             display: none;
             flex-direction: column;
@@ -406,7 +378,7 @@ body {
             gap: 18px;
         }
 
-.language-selector h2 {
+        .language-selector h2 {
             font-size: 24px;
             font-weight: 900;
             color: #ffffff;
@@ -416,7 +388,7 @@ body {
             -webkit-text-fill-color: transparent;
         }
 
-.language-btn {
+        .language-btn {
             width: 100%;
             max-width: 320px;
             padding: 16px 24px;
@@ -436,23 +408,15 @@ body {
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
         }
 
-.language-btn:hover {
+        .language-btn:hover {
             border-color: var(--led-cyan);
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
             transform: translateY(-3px) scale(1.02);
             background: linear-gradient(135deg, #25334d, #14203a);
         }
 
-.language-btn:active {
-            transform: translateY(0) scale(1);
-        }
+        .flag-icon { font-size: 28px; line-height: 1; }
 
-.flag-icon {
-            font-size: 28px;
-            line-height: 1;
-        }
-
-/* گڵۆپی سەوزی لیدی */
         .led-dot {
             width: 9px;
             height: 9px;
@@ -463,12 +427,12 @@ body {
             animation: pulse-led 1.8s infinite;
         }
 
-@keyframes pulse-led {
+        @keyframes pulse-led {
             0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px var(--led-green); }
             50% { opacity: 0.4; transform: scale(0.85); box-shadow: 0 0 4px var(--led-green); }
         }
 
-.login-box {
+        .login-box {
             display: none;
             flex-direction: column;
             align-items: center;
@@ -477,7 +441,6 @@ body {
             width: 100%;
         }
 
-/* ڕێکخستنی شوێنی ناونیشانەکان بۆ تەواوی لای ڕاست */
         .form-row {
             display: flex;
             align-items: center;
@@ -488,7 +451,7 @@ body {
             max-width: 340px;
         }
 
-.form-row label {
+        .form-row label {
             font-size: 15px;
             font-weight: 700;
             color: #f1f5f9;
@@ -500,14 +463,14 @@ body {
             gap: 4px;
         }
 
-.input-wrapper {
+        .input-wrapper {
             flex: 1;
             position: relative;
             display: flex;
             align-items: center;
         }
 
-.form-row input {
+        .form-row input {
             width: 100%;
             padding: 10px 14px;
             border: 1.5px solid rgba(255, 255, 255, 0.15);
@@ -522,24 +485,21 @@ body {
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
-#form-number {
-            direction: ltr;
-        }
+        #form-number { direction: ltr; }
 
-.form-row input:focus {
+        .form-row input:focus {
             border-color: var(--led-cyan);
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.35), inset 0 2px 4px rgba(0, 0, 0, 0.4);
             background: rgba(15, 23, 42, 0.95);
         }
 
-.form-row input[readonly] {
+        .form-row input[readonly] {
             background: rgba(30, 41, 59, 0.6);
             color: #38bdf8;
             border-color: rgba(56, 189, 248, 0.2);
             cursor: default;
         }
 
-/* دوگمەکانی کردار لەگەڵ بریقەی لیدی */
         .btn-action {
             width: 160px;
             padding: 10px 18px;
@@ -562,29 +522,23 @@ body {
             gap: 8px;
         }
 
-.btn-action:hover {
+        .btn-action:hover {
             border-color: var(--led-cyan);
             box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
             transform: translateY(-2px);
             background: linear-gradient(135deg, #25334d, #14203a);
         }
 
-.btn-action:active {
-            transform: translateY(0);
-            box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
-        }
-
-.btn-start-quiz {
+        .btn-start-quiz {
             border-color: rgba(0, 255, 135, 0.6);
             box-shadow: 0 0 12px rgba(0, 255, 135, 0.2);
         }
 
-.btn-start-quiz:hover {
+        .btn-start-quiz:hover {
             border-color: var(--led-green);
             box-shadow: 0 0 20px rgba(0, 255, 135, 0.5);
         }
 
-/* تەختەکلیلی کیپاد - ئاراستەی چەپ بۆ ڕاست */
         .keypad-container {
             display: flex;
             flex-direction: column;
@@ -592,7 +546,7 @@ body {
             margin: 10px 0;
         }
 
-.keypad-grid {
+        .keypad-grid {
             direction: ltr;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -605,7 +559,7 @@ body {
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
         }
 
-.key-btn {
+        .key-btn {
             background: linear-gradient(180deg, #1e293b 0%, #151e30 100%);
             color: #f8fafc;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -622,7 +576,7 @@ body {
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
 
-.key-btn:hover {
+        .key-btn:hover {
             background: linear-gradient(180deg, #2b3952 0%, #1c273e 100%);
             border-color: rgba(0, 242, 254, 0.5);
             box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
@@ -630,40 +584,18 @@ body {
             transform: translateY(-1px);
         }
 
-.key-btn:active {
-            transform: translateY(1px);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            background: #111a2c;
-        }
-
-/* دوگمەی سڕینەوە بە ماوس (Backspace) */
         .key-btn.key-delete {
             background: linear-gradient(180deg, #3f1d28 0%, #29121a 100%);
             border-color: rgba(255, 51, 102, 0.4);
             color: #ff4d79;
         }
 
-.key-btn.key-delete:hover {
-            background: linear-gradient(180deg, #572032 0%, #361421 100%);
-            border-color: var(--led-red);
-            box-shadow: 0 0 14px rgba(255, 51, 102, 0.6);
-            color: #ffffff;
-        }
-
-.key-btn.key-clear {
+        .key-btn.key-clear {
             background: linear-gradient(180deg, #2d261a 0%, #1e1910 100%);
             border-color: rgba(255, 170, 0, 0.3);
             color: #ffb732;
         }
 
-.key-btn.key-clear:hover {
-            background: linear-gradient(180deg, #42351f 0%, #292011 100%);
-            border-color: var(--led-amber);
-            box-shadow: 0 0 12px rgba(255, 170, 0, 0.5);
-            color: #ffffff;
-        }
-
-/* بەشی پرسیارەکان */
         .quiz-header {
             display: flex;
             justify-content: space-between;
@@ -672,7 +604,7 @@ body {
             gap: 12px;
         }
 
-.timer-circle {
+        .timer-circle {
             width: 52px;
             height: 52px;
             border-radius: 50%;
@@ -689,12 +621,12 @@ body {
             animation: timer-pulse 1s infinite alternate;
         }
 
-@keyframes timer-pulse {
+        @keyframes timer-pulse {
             0% { box-shadow: 0 0 8px rgba(255, 51, 102, 0.4); }
             100% { box-shadow: 0 0 18px rgba(255, 51, 102, 0.8); }
         }
 
-.category-badge {
+        .category-badge {
             background: rgba(30, 41, 59, 0.8);
             border: 1px solid rgba(0, 242, 254, 0.3);
             color: #f8fafc;
@@ -709,7 +641,7 @@ body {
             flex-shrink: 0;
         }
 
-.question-text {
+        .question-text {
             font-size: 17px;
             font-weight: 800;
             color: #ffffff;
@@ -723,14 +655,14 @@ body {
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-.question-image-container {
+        .question-image-container {
             width: 100%;
             text-align: center;
             margin-bottom: 14px;
             display: none;
         }
 
-.question-image {
+        .question-image {
             max-width: 100%;
             max-height: 180px;
             border-radius: 12px;
@@ -739,12 +671,12 @@ body {
             object-fit: contain;
         }
 
-.numbers-wrap-container {
+        .numbers-wrap-container {
             width: 100%;
             margin-bottom: 16px;
         }
 
-.horizontal-wrap-list {
+        .horizontal-wrap-list {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
@@ -752,7 +684,7 @@ body {
             direction: ltr;
         }
 
-.grid-item {
+        .grid-item {
             width: 36px;
             height: 36px;
             background: #1e293b;
@@ -769,7 +701,7 @@ body {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-.grid-item.current {
+        .grid-item.current {
             border-color: var(--led-cyan);
             color: #ffffff;
             background: #0f172a;
@@ -777,26 +709,17 @@ body {
             box-shadow: 0 0 12px var(--led-cyan);
         }
 
-.grid-item.correct {
-            background-color: #334155 !important;
-            color: #e2e8f0 !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-        }
+        .grid-item.correct { background-color: #334155 !important; color: #e2e8f0 !important; }
+        .grid-item.wrong { background-color: #334155 !important; color: #e2e8f0 !important; }
 
-.grid-item.wrong {
-            background-color: #334155 !important;
-            color: #e2e8f0 !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-        }
-
-.options-title {
+        .options-title {
             color: #94a3b8;
             font-weight: 700;
             margin-bottom: 10px;
             font-size: 14px;
         }
 
-.options-container-vertical {
+        .options-container-vertical {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -804,7 +727,7 @@ body {
             width: 100%;
         }
 
-.option-btn {
+        .option-btn {
             width: 100%;
             background: rgba(30, 41, 59, 0.7);
             color: #f1f5f9;
@@ -821,44 +744,35 @@ body {
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
 
-.option-btn:hover {
+        .option-btn:hover {
             background: rgba(45, 60, 85, 0.85);
             border-color: rgba(0, 242, 254, 0.4);
             box-shadow: 0 0 12px rgba(0, 242, 254, 0.25);
             transform: translateX(-3px);
         }
 
-.option-btn.selected-correct, .option-btn.selected-wrong {
+        .option-btn.selected-correct, .option-btn.selected-wrong {
             background-color: #475569 !important;
             color: white !important;
-            border-color: #64748b !important;
         }
 
-/* بەشی ئەنجامەکان */
         .result-box {
             text-align: center;
             margin: auto 0;
             padding: 24px 15px;
         }
 
-.result-title {
+        .result-title {
             font-size: 22px;
             font-weight: 800;
             margin-bottom: 16px;
             line-height: 1.6;
         }
 
-.result-title.pass {
-            color: #4ade80;
-            text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
-        }
+        .result-title.pass { color: #4ade80; text-shadow: 0 0 15px rgba(74, 222, 128, 0.4); }
+        .result-title.fail { color: #f87171; text-shadow: 0 0 15px rgba(248, 113, 113, 0.4); }
 
-.result-title.fail {
-            color: #f87171;
-            text-shadow: 0 0 15px rgba(248, 113, 113, 0.4);
-        }
-
-.score-badge {
+        .score-badge {
             font-size: 32px;
             font-weight: 800;
             background: rgba(15, 23, 42, 0.9);
@@ -871,7 +785,7 @@ body {
             color: #ffffff;
         }
 
-.footer-text {
+        .footer-text {
             text-align: center;
             font-size: 13px;
             color: #94a3b8;
@@ -885,151 +799,145 @@ body {
 </head>
 <body>
 
-<div class='app-led-wrapper'>
-    <div class='led-border-glow'/>
-    <div class='led-border-glow-extra'/>
+<div class="app-led-wrapper">
+    <div class="led-border-glow"></div>
+    <div class="led-border-glow-extra"></div>
 
-<div class='app-container'>
-        <div class='led-runner-line'/>
+    <div class="app-container">
+        <div class="led-runner-line"></div>
 
-<div class='app-header-bar'>
-            <span class='led-dot'/>
-            <div class='app-header-title' id='main-title'>تاقیکردنەوەی تیۆری هاتووچۆ</div>
+        <div class="app-header-bar">
+            <span class="led-dot"></span>
+            <div class="app-header-title" id="main-title">تاقیکردنەوەی تیۆری هاتووچۆ</div>
         </div>
 
-<div class='content-section' id='quiz-section'>
+        <div class="content-section" id="quiz-section">
             
-            <!-- ١. بەشی نیمچە بازنە + ناوی کراش (ئێستا یەکەم بەشە) -->
-            <div class='crash-spinner-section' id='crash-spinner' onclick='goToActivation()'>
-                <div class='spinner-container'>
-                    <div class='spinner-ring'/>
-                    <div class='spinner-ring'/>
-                    <div class='spinner-ring'/>
+            <div class="crash-spinner-section" id="crash-spinner" onclick="goToActivation()">
+                <div class="spinner-container">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
                 </div>
-                <div class='crash-title'>کراش</div>
+                <div class="crash-title">کراش</div>
             </div>
 
-<!-- ٢. بەشی ئەکتیڤکردنی سەرەتایی بە کۆد (ئێستا دووەم بەشە) -->
-            <div class='activation-box' id='activation-gate'>
-                <div class='activation-icon-glow'>🔒</div>
-                <div class='activation-title' id='activation-title-text'>ئەکتیڤکردنی سیستەم</div>
-                <p class='activation-subtitle' id='activation-subtitle-text'>تکایە کۆدی ئەکتیڤکردن بنووسە بۆ چوونەژوورەوە</p>
+            <div class="activation-box" id="activation-gate">
+                <div class="activation-icon-glow">🔒</div>
+                <div class="activation-title" id="activation-title-text">ئەکتیڤکردنی سیستەم</div>
+                <p class="activation-subtitle" id="activation-subtitle-text">تکایە کۆدی ئەکتیڤکردن بنووسە بۆ چوونەژوورەوە</p>
 
-<div class='activation-input-wrap'>
-                    <input autocomplete='off' id='activation-code-input' onkeypress='if(event.key === &quot;Enter&quot;) checkActivation();' placeholder='کۆدی ئەکتیڤ بنووسە' type='password'/>
-                    <button class='toggle-pwd-btn' onclick='toggleActivationVisibility()' title='بینینی کۆد' type='button'>👁&#65039;</button>
+                <div class="activation-input-wrap">
+                    <input autocomplete="off" id="activation-code-input" onkeypress="if(event.key === 'Enter') checkActivation();" placeholder="کۆدی ئەکتیڤ بنووسە" type="password">
+                    <button class="toggle-pwd-btn" onclick="toggleActivationVisibility()" title="بینینی کۆد" type="button">👁️</button>
                 </div>
 
-<div class='activation-msg' id='activation-msg'/>
+                <div class="activation-msg" id="activation-msg"></div>
 
-<button class='btn-action btn-start-quiz' id='btn-activate' onclick='checkActivation()' style='width: 170px;' type='button'>ئەکتیڤکردن</button>
+                <button class="btn-action btn-start-quiz" id="btn-activate" onclick="checkActivation()" style="width: 170px;" type="button">ئەکتیڤکردن</button>
             </div>
 
-<!-- ٣. هەڵبژاردنی زمان -->
-            <div class='language-selector' id='language-selector'>
-                <h2 id='lang-select-title'>هەڵبژاردنی زمان / اختيار اللغة / Language</h2>
-                <button class='language-btn' onclick='selectLanguage(&quot;ku&quot;)' type='button'>
-                    <span class='flag-icon'>🟢&#9728;&#65039;🔴</span>
+            <div class="language-selector" id="language-selector">
+                <h2 id="lang-select-title">هەڵبژاردنی زمان / اختيار اللغة / Language</h2>
+                <button class="language-btn" onclick="selectLanguage('ku')" type="button">
+                    <span class="flag-icon">🟢☀️🔴</span>
                     <span>کوردی</span>
                 </button>
-                <button class='language-btn' onclick='selectLanguage(&quot;ar&quot;)' type='button'>
-                    <span class='flag-icon'>🇮🇶</span>
+                <button class="language-btn" onclick="selectLanguage('ar')" type="button">
+                    <span class="flag-icon">🇮🇶</span>
                     <span>العربية</span>
                 </button>
-                <button class='language-btn' onclick='selectLanguage(&quot;en&quot;)' type='button'>
-                    <span class='flag-icon'>🌐</span>
+                <button class="language-btn" onclick="selectLanguage('en')" type="button">
+                    <span class="flag-icon">🌐</span>
                     <span>English</span>
                 </button>
             </div>
 
-<div class='login-box' id='login-box' style='display: none;'>
-                <div class='form-row'>
-                    <label for='form-number' id='label-form-number'>ژمارەی فۆڕم</label>
-                    <div class='input-wrapper'>
-                        <input autocomplete='off' id='form-number' inputmode='numeric' maxlength='15' placeholder='----' type='text'/>
+            <div class="login-box" id="login-box" style="display: none;">
+                <div class="form-row">
+                    <label for="form-number" id="label-form-number">ژمارەی فۆڕم</label>
+                    <div class="input-wrapper">
+                        <input autocomplete="off" id="form-number" inputmode="numeric" maxlength="15" placeholder="----" type="text">
                     </div>
                 </div>
                 
-                <div class='form-row'>
-                    <label for='full-name' id='label-full-name'>ناوی سیانی<span style='color:#ef4444;'>*</span></label>
-                    <div class='input-wrapper'>
-                        <input id='full-name' placeholder='ناوی بەشداربوو' readonly='readonly' type='text'/>
+                <div class="form-row">
+                    <label for="full-name" id="label-full-name">ناوی سیانی<span style="color:#ef4444;">*</span></label>
+                    <div class="input-wrapper">
+                        <input id="full-name" placeholder="ناوی بەشداربوو" readonly="readonly" type="text">
                     </div>
                 </div>
 
-<button class='btn-action' id='btn-search' onclick='searchForm()' type='button'>گەڕان</button>
+                <button class="btn-action" id="btn-search" onclick="searchForm()" type="button">گەڕان</button>
 
-<div class='keypad-container'>
-                    <div class='keypad-grid'>
-                        <button class='key-btn' onclick='pressKey(&quot;1&quot;)' type='button'>1</button>
-                        <button class='key-btn' onclick='pressKey(&quot;2&quot;)' type='button'>2</button>
-                        <button class='key-btn' onclick='pressKey(&quot;3&quot;)' type='button'>3</button>
-                        <button class='key-btn' onclick='pressKey(&quot;4&quot;)' type='button'>4</button>
-                        <button class='key-btn' onclick='pressKey(&quot;5&quot;)' type='button'>5</button>
-                        <button class='key-btn' onclick='pressKey(&quot;6&quot;)' type='button'>6</button>
-                        <button class='key-btn' onclick='pressKey(&quot;7&quot;)' type='button'>7</button>
-                        <button class='key-btn' onclick='pressKey(&quot;8&quot;)' type='button'>8</button>
-                        <button class='key-btn' onclick='pressKey(&quot;9&quot;)' type='button'>9</button>
-                        <button class='key-btn key-clear' onclick='clearKey()' title='پاککردنەوەی هەمووی' type='button'>C</button>
-                        <button class='key-btn' onclick='pressKey(&quot;0&quot;)' type='button'>0</button>
-                        <button class='key-btn key-delete' onclick='deleteKey()' title='سڕینەوەی یەک ژمارە' type='button'>&#9003;</button>
+                <div class="keypad-container">
+                    <div class="keypad-grid">
+                        <button class="key-btn" onclick="pressKey('1')" type="button">1</button>
+                        <button class="key-btn" onclick="pressKey('2')" type="button">2</button>
+                        <button class="key-btn" onclick="pressKey('3')" type="button">3</button>
+                        <button class="key-btn" onclick="pressKey('4')" type="button">4</button>
+                        <button class="key-btn" onclick="pressKey('5')" type="button">5</button>
+                        <button class="key-btn" onclick="pressKey('6')" type="button">6</button>
+                        <button class="key-btn" onclick="pressKey('7')" type="button">7</button>
+                        <button class="key-btn" onclick="pressKey('8')" type="button">8</button>
+                        <button class="key-btn" onclick="pressKey('9')" type="button">9</button>
+                        <button class="key-btn key-clear" onclick="clearKey()" title="پاککردنەوەی هەمووی" type="button">C</button>
+                        <button class="key-btn" onclick="pressKey('0')" type="button">0</button>
+                        <button class="key-btn key-delete" onclick="deleteKey()" title="سڕینەوەی یەک ژمارە" type="button">⌫</button>
                     </div>
                 </div>
 
-<button class='btn-action btn-start-quiz' id='btn-start-quiz' onclick='startQuiz()' type='button'>تاقیکردنەوە</button>
+                <button class="btn-action btn-start-quiz" id="btn-start-quiz" onclick="startQuiz()" type="button">تاقیکردنەوە</button>
             </div>
 
-<div id='quiz-box' style='display: none; flex-direction: column; flex: 1;'>
-                <div class='quiz-header'>
-                    <div class='category-badge'>
-                        <span class='led-dot'/>
-                        <span id='category-text'>هاتووچۆ</span>
+            <div id="quiz-box" style="display: none; flex-direction: column; flex: 1;">
+                <div class="quiz-header">
+                    <div class="category-badge">
+                        <span class="led-dot"></span>
+                        <span id="category-text">هاتووچۆ</span>
                     </div>
-                    <div class='timer-circle' id='timer-display'>1</div>
+                    <div class="timer-circle" id="timer-display">1</div>
                 </div>
 
-<div class='question-text' id='question-title'>پرسیار ...</div>
+                <div class="question-text" id="question-title">پرسیار ...</div>
 
-<div class='question-image-container' id='q-img-container'>
-                    <img alt='وێنەی پرسیار' class='question-image' id='q-img' src=''/>
+                <div class="question-image-container" id="q-img-container">
+                    <img alt="وێنەی پرسیار" class="question-image" id="q-img" src="">
                 </div>
 
-<div class='numbers-wrap-container'>
-                    <div class='horizontal-wrap-list' id='grid-container'/>
+                <div class="numbers-wrap-container">
+                    <div class="horizontal-wrap-list" id="grid-container"></div>
                 </div>
 
-<div style='margin-top: auto;'>
-                    <p class='options-title' id='options-title-text'>وەڵامەکان:</p>
-                    <div class='options-container-vertical'>
-                        <button class='option-btn' onclick='selectAnswer(0)' type='button'><span id='opt0'/></button>
-                        <button class='option-btn' onclick='selectAnswer(1)' type='button'><span id='opt1'/></button>
-                        <button class='option-btn' onclick='selectAnswer(2)' type='button'><span id='opt2'/></button>
+                <div style="margin-top: auto;">
+                    <p class="options-title" id="options-title-text">وەڵامەکان:</p>
+                    <div class="options-container-vertical">
+                        <button class="option-btn" onclick="selectAnswer(0)" type="button"><span id="opt0"></span></button>
+                        <button class="option-btn" onclick="selectAnswer(1)" type="button"><span id="opt1"></span></button>
+                        <button class="option-btn" onclick="selectAnswer(2)" type="button"><span id="opt2"></span></button>
                     </div>
                 </div>
             </div>
 
-<div class='result-box' id='result-box' style='display: none;'>
-                <div class='result-title' id='result-msg'/>
-                <div class='score-badge' id='score-display'>0 / 25</div>
-                <br/>
-                <button class='btn-action' id='btn-restart' onclick='restartQuiz()' style='width: 220px;' type='button'>دوبارە ئەنجامدانەوە</button>
+            <div class="result-box" id="result-box" style="display: none;">
+                <div class="result-title" id="result-msg"></div>
+                <div class="score-badge" id="score-display">0 / 25</div>
+                <br>
+                <button class="btn-action" id="btn-restart" onclick="restartQuiz()" style="width: 220px;" type="button">دوبارە ئەنجامدانەوە</button>
             </div>
 
-</div>
+        </div>
 
-<div class='footer-text' id='footer-text'>
+        <div class="footer-text" id="footer-text">
             ئەم وێبسایتە لەلایەن محمد دروست کراوە مافی پارێزراوە 2026
         </div>
     </div>
 </div>
 
-<b:section id='main-section' showelement='no'/>
-
 <script>
-//<![CDATA[
     let currentLanguage = 'ku';
 
-const translations = {
+    const translations = {
         ku: {
             mainTitle: "تاقیکردنەوەی تیۆری هاتووجۆ",
             activationTitle: "ئەکتیڤکردنی سیستەم",
@@ -1098,13 +1006,12 @@ const translations = {
         }
     };
 
-// فەنکشنی نوێ بۆ چوونە بەشی ئەکتیڤکردن
     function goToActivation() {
         document.getElementById('crash-spinner').style.display = 'none';
         document.getElementById('activation-gate').style.display = 'flex';
     }
 
-function selectLanguage(lang) {
+    function selectLanguage(lang) {
         currentLanguage = lang;
         document.documentElement.setAttribute('lang', lang);
         
@@ -1118,16 +1025,13 @@ function selectLanguage(lang) {
             document.querySelectorAll('.question-text').forEach(el => el.style.textAlign = 'left');
         }
 
-updateUIText();
-        
-        // شاردنەوەی بەشی هەڵبژاردنی زمان و پیشاندانی لۆگین
+        updateUIText();
         document.getElementById('language-selector').style.display = 'none';
         document.getElementById('login-box').style.display = 'flex';
     }
 
-function updateUIText() {
+    function updateUIText() {
         const t = translations[currentLanguage];
-        
         document.getElementById('main-title').innerText = t.mainTitle;
         document.getElementById('activation-title-text').innerText = t.activationTitle;
         document.getElementById('activation-subtitle-text').innerText = t.activationSubtitle;
@@ -1143,7 +1047,7 @@ function updateUIText() {
         document.getElementById('footer-text').innerText = t.footerText;
     }
 
-const questionsBase = [
+    const questionsBase = [
         {
             q: "ئەم هێمایە مانای چییە؟",
             qAr: "ماذا تعني هذه العلامة؟",
@@ -1173,227 +1077,16 @@ const questionsBase = [
             optionsAr: ["أ) ارتفاع درجة حرارة المحرك", "ب) ربط حزام الأمان", "ج) مشكلة في زيت المحرك"],
             optionsEn: ["A) Engine temperature rising", "B) Fasten seatbelt", "C) Engine oil problem"],
             correct: 0
-        },
-        {
-            q: "شێوازی بەستنی پشتێنی سەلامەتی بۆ ژنی دووگیان؟",
-            qAr: "طريقة ربط حزام الأمان للمرأة الحامل؟",
-            qEn: "How to fasten a seatbelt for a pregnant woman?",
-            image: "https://www.image2url.com/r2/default/images/1790605101564-ccfe4498-af21-4e50-8acb-d854ef7fe727.png",
-            options: ["A) بە شێوەی وێنەی ژمارە یەک", "B) بە شێوەی وێنەی ژمارە دوو", "C) پێویست بە خۆبەستنەوە ناکات"],
-            optionsAr: ["أ) بطريقة الصورة الأولى", "ب) بطريقة الصورة الثانية", "ج) لا حاجة لربطه"],
-            optionsEn: ["A) As shown in picture one", "B) As shown in picture two", "C) No need to fasten"],
-            correct: 0
-        },
-        {
-            q: "لە چ شوێنێک لێخوڕینی ئۆتۆمبێل بە عەرەبانەوە مەترسیدارە؟",
-            qAr: "في أي مكان يكون سحب السيارة بمقطورة خطيراً؟",
-            qEn: "Where is it dangerous to tow a vehicle with a trailer?",
-            image: "https://www.image2url.com/r2/default/images/1790605501582-0cad9749-c063-4128-863e-f87d239b048c.png",
-            options: ["A) لە هەوراز، نشێو، پێچ", "B) لە ڕێگای ڕاستەوڕاست", "C) تەنها لە نشێو"],
-            optionsAr: ["أ) في الصعود والنزول والمنعطفات", "ب) في الطريق المستقيم", "ج) فقط في النزول"],
-            optionsEn: ["A) On hills, descents, and turns", "B) On a straight road", "C) Only on descents"],
-            correct: 0
-        },
-        {
-            q: "تا چێ تمەنێک پێویستە منداڵ لەسەر کوشنی تایبەت بەمنداڵ دابنرێت؟",
-            qAr: "حتى أي عمر يجب وضع الطفل على مقعد خاص بالأطفال؟",
-            qEn: "Until what age should a child be placed in a special child seat?",
-            image: "https://www.image2url.com/r2/default/images/1791359847375-ce1b0515-0179-4770-b513-5a14d88a26b8.png",
-            options: ["A) تا تەمەنی 10 ساڵ", "B) تا تەمەنی 8 ساڵ", "C) تا تەمەنی 13 ساڵ"],
-            optionsAr: ["أ) حتى سن 10 سنوات", "ب) حتى سن 8 سنوات", "ج) حتى سن 13 سنة"],
-            optionsEn: ["A) Until age 10", "B) Until age 8", "C) Until age 13"],
-            correct: 2
-        },
-        {
-            q: "بۆچی سەرخۆش پیادەیەکی مەترسیدارە؟",
-            qAr: "لماذا يكون المشاة السكارى خطرين؟",
-            qEn: "Why are drunk pedestrians dangerous?",
-            image: "https://www.image2url.com/r2/default/images/1791376043829-42cd788f-bb6e-4de2-9343-843fc2d9ca57.png",
-            options: ["A) بەهۆی بااڵی کورتیانەوە", "B) چوونکە ناتوانن کۆنتڕۆلی خۆیان بکەن", "C) بەهۆی جوڵەی خێرایانەوە"],
-            optionsAr: ["أ) بسبب انخفاض الانتباه", "ب) لأنهم لا يستطيعون التحكم بأنفسهم", "ج) بسبب حركتهم السريعة"],
-            optionsEn: ["A) Due to reduced attention", "B) Because they cannot control themselves", "C) Due to their fast movement"],
-            correct: 1
-        },
-        {
-            q: "ئەم هێمایە مانای چییە؟",
-            qAr: "ماذا تعني هذه العلامة؟",
-            qEn: "What does this sign mean?",
-            image: "https://user41838.na.imgto.link/public/20261007/144596373560ff894fa47eee-picture1.avif",
-            options: ["A وریابە خلیسکی رێگا لەپێشە", "B وریابە لە کاتی بارینی باران خلیسکی رێگا لەپێشە", "C وریابە لەکاتی بارینی بەفر خلیسکی رێگا لەپێشە"],
-            optionsAr: ["أ احذر، الطريق زلق في المقدمة", "ب احذر، عند المطر الطريق زلق في المقدمة", "ج احذر، عند الثلج الطريق زلق في المقدمة"],
-            optionsEn: ["A Beware, slippery road ahead", "B Beware, road slippery when raining", "C Beware, road slippery when snowing"],
-            correct: 2
-        },
-        {
-            q: "ئەم هێمایە مانای چییە؟",
-            qAr: "ماذا تعني هذه العلامة؟",
-            qEn: "What does this sign mean?",
-            image: "https://user41838.na.imgto.link/public/20261007/33f400d96571413671067adb-picture2.avif",
-            options: ["A) تێپەڕاندنی ئەو سوارڕۆیانەی بە بزوێنەر کاردەکەن رێگەپێنەدراوە", "B) تێپەڕاندنی ئەو سوارڕۆیانەی بە بزوێنەر کاردەکەن رێگەپێدراوە", "C) تێپەڕاندن بۆ بارهەڵگر رێگەپێنەدراوە"],
-            optionsAr: ["أ) يمنع مرور الدراجات النارية التي تعمل بمحرك", "ب) يسمح بمرور الدراجات النارية التي تعمل بمحرك", "ج) يمنع المرور للشاحنات"],
-            optionsEn: ["A) Motor-powered motorcycles prohibited", "B) Motor-powered motorcycles allowed", "C) Trucks prohibited"],
-            correct: 0
-        },
-        {
-            q: "ئەم هێمایە مانای چییە؟",
-            qAr: "ماذا تعني هذه العلامة؟",
-            qEn: "What does this sign mean?",
-            image: "https://user41838.na.imgto.link/public/20261007/a5d127de0fc2afbf8c377ee3-picture3.avif",
-            options: ["A) سوڕانەوە رێگەپێنەدراوە", "B) پێچکردنەوە بۆ دەستە چەپ رێگەپێنەدراوە", "C) پێچکردنەوە بۆ دەستە ڕاست رێگەپێنەدراوە"],
-            optionsAr: ["أ) الدوران ممنوع", "ب) الانعطاف إلى اليسار ممنوع", "ج) الانعطاف إلى اليمين ممنوع"],
-            optionsEn: ["A) U-turn prohibited", "B) Left turn prohibited", "C) Right turn prohibited"],
-            correct: 0
-        },
-        {
-            q: "ئەم هێمایە لە ناو داشبۆرد مانای چییە؟",
-            qAr: "ماذا تعني هذه العلامة في لوحة القيادة؟",
-            qEn: "What does this sign mean on the dashboard?",
-            image: "https://user41838.na.imgto.link/public/20261007/57bdea0137c0459e2fda4c41-picture4.avif",
-            options: ["A ته نکبوون/نه مانی با نسه کانی (بەنز)ی ئیستۆپگرتن", "B) بەرزبونەوەی پله ی گه رمیی بزوێنەر (حەماوە)", "C که میی ئاوی پاککردنەوەی جام"],
-            optionsAr: ["أ قلة/نفاد بنزين الفرامل", "ب ارتفاع درجة حرارة المحرك", "ج قلة ماء تنظيف الزجاج"],
-            optionsEn: ["A Low/no brake fluid", "B Engine overheating", "C Low windshield washer fluid"],
-            correct: 2
-        },
-        {
-            q: "هێڵێکی بەربەست شانبەشانی هێڵێکی پچڕ پچڕ مانای چییە؟",
-            qAr: "ماذا يعني خط متصل بجانب خط متقطع؟",
-            qEn: "What does a solid line next to a broken line mean?",
-            image: "https://user41838.na.imgto.link/public/20261007/8c28e0576ff73027b4849f98-picture5.avif",
-            options: ["A) دەتوانێت راڕەوەکەت بگۆڕێت", "B) ناتوانیت راڕەوەکەت بگۆڕێت", "C) هیچ الیەک ناتوانن راڕەو بگۆڕن"],
-            optionsAr: ["أ) يمكنك تغيير المسار", "ب) لا يمكنك تغيير المسار", "ج) لا يمكن لأي جهة تغيير المسار"],
-            optionsEn: ["A) You may change lanes", "B) You may not change lanes", "C) Neither side may change lanes"],
-            correct: 0
-        },
-        {
-            q: "ئۆتۆمبێلی تەکسی چییە؟",
-            qAr: "ما هي سيارة الأجرة؟",
-            qEn: "What is a taxi?",
-            image: "https://user41838.na.imgto.link/public/20261007/68d302c6ce3d34129ef2b160-picture6.avif",
-            options: ["A) تەرخان کراوە بۆ گواستنەوەی تایبەت بە بێ کرێ", "B) تەرخان کراوە بۆ گواستنەوەی کەسی بەرامبەر بەکرێ", "C) تەرخان کراوە بۆ گواستنەوەی تایبەت بەرامبەر بە کرێ"],
-            optionsAr: ["أ) مخصصة للنقل الخاص بدون أجرة", "ب) مخصصة لنقل الأشخاص مقابل أجرة", "ج) مخصصة للنقل الخاص مقابل أجرة"],
-            optionsEn: ["A) Designated for private transport without fare", "B) Designated for transporting people for a fare", "C) Designated for private transport for a fare"],
-            correct: 1
-        },
-        {
-            q: "ئەم هێمایە مانای چییە؟",
-            qAr: "ماذا تعني هذه العلامة؟",
-            qEn: "What does this sign mean?",
-            image: "https://user41838.na.imgto.link/public/20261007/e9cae49b855f5b0b400f6bd9-picture7.avif",
-            options: ["A) پێشرەوی بۆ دەستە راستە", "B) کۆنترۆڵ نەکراوە", "C) کۆنترۆڵ کراوە ڕێگە بدە"],
-            optionsAr: ["أ) تقدم إلى اليمين", "ب) غير مراقب", "ج) مراقب، أعط الطريق"],
-            optionsEn: ["A) Proceed to the right", "B) Not controlled", "C) Controlled, yield"],
-            correct: 2
-        },
-        {
-            q: "وێنەی کام یەک لەم تایانە لە بارێکی ئاساییدان؟",
-            qAr: "صورة أي من هذه الإطارات في حالة طبيعية؟",
-            qEn: "Which tire image shows a normal condition?",
-            image: "https://user41838.na.imgto.link/public/20261007/fadf807262e0512eeebf42f7-picture8.avif",
-            options: ["A تایەی ژمارە یەک", "B تایەی ژمارە دوو", "C تایەی ژمارە سێ"],
-            optionsAr: ["أ الإطار رقم واحد", "ب الإطار رقم اثنين", "ج الإطار رقم ثلاثة"],
-            optionsEn: ["A Tire number one", "B Tire number two", "C Tire number three"],
-            correct: 1
-        },
-        {
-            q: "پێویستە گڵۆپی ئاگادارکردنەوەی مەترسی چواری (فالشەر) بەکاربهێنیت؟",
-            qAr: "متى يجب استخدام إشارة التحذير من الخطر الرباعية (الفلاشر)؟",
-            qEn: "When should you use the four-way hazard warning lights (flasher)?",
-            options: ["A کاتێک کە پێچ دەکەمەوە بۆ دەستە ڕاست و دەستە چەپ", "B هەرکاتێک لەناکاو و بەتوندی ئیستۆپ بکەم", "C لە کاتی بونی قەرەباڵخی لەسەر ڕێگا"],
-            optionsAr: ["أ عند الانعطاف يميناً أو يساراً", "ب عندما أتوقف فجأة وبشدة", "ج عند وجود ازدحام على الطريق"],
-            optionsEn: ["A When turning right or left", "B Whenever I stop suddenly and sharply", "C When there is congestion on the road"],
-            correct: 2
-        },
-        {
-            q: "دەبێت هۆڕن بۆ چی بەکاربهێنیت؟",
-            qAr: "لأي غرض يجب استخدام الهورن؟",
-            qEn: "For what purpose should you use the horn?",
-            options: ["A بۆ ئەوەی ئاماژە بە بێزاری خۆت بکەیت", "B بۆ ساڵوکردن لە بەکارهێنەرانی تری ڕێگاوبان", "C بۆ ئاگادارکردنەوەی کەسانی تر لە بوونی مەترسی"],
-            optionsAr: ["أ للإشارة إلى انزعاجك", "ب للسلام على مستخدمي الطريق الآخرين", "ج لتحذير الآخرين من وجود خطر"],
-            optionsEn: ["A To signal your annoyance", "B To greet other road users", "C To warn others of danger"],
-            correct: 2
-        },
-        {
-            q: "مەی چۆن کاریگەری لەسەر تۆ هەیە؟",
-            qAr: "كيف يؤثر الكحول عليك؟",
-            qEn: "How does alcohol affect you?",
-            options: ["A هۆشیاریت زیاد دەکات", "B کاردانەوەکانت خێراتر دەکات", "C سەرنجت کەم دەکات"],
-            optionsAr: ["أ يزيد من يقظتك", "ب يجعل ردود فعلك أسرع", "ج يقلل من تركيزك"],
-            optionsEn: ["A Increases your alertness", "B Makes your reactions faster", "C Reduces your attention"],
-            correct: 2
-        },
-        {
-            q: "ئەگەر هەست بە ماندوێتی دەکەیت باشتر وایە؟",
-            qAr: "إذا شعرت بالتعب، فمن الأفضل؟",
-            qEn: "If you feel tired, it is better to?",
-            options: ["A خێراییەکەت زیاد بکە بۆ ئەوەی بە خێرایی بگەیتە شوێنی مەبەست", "B پەنجەرە بکەرەوە بۆ دابینکردنی هەوای پاک", "C خێراییەکەت کەمبکەرەوە"],
-            optionsAr: ["أ زيادة سرعتك للوصول إلى وجهتك بسرعة", "ب فتح النافذة لتوفير الهواء النقي", "ج تقليل سرعتك"],
-            optionsEn: ["A Increase your speed to reach your destination quickly", "B Open the window to provide fresh air", "C Reduce your speed"],
-            correct: 1
-        },
-        {
-            q: "لە پاش ئۆتۆمبێلێکەوە دەڕۆیت لەسەر ڕێگایەکی تەڕ. پێویستە بەالیەنی کەمەوە چەند بۆشایی بەجێبهێ؟",
-            qAr: "تقود خلف سيارة على طريق مبلل. كم يجب أن تترك مسافة على الأقل؟",
-            qEn: "You are driving behind a car on a wet road. How much distance should you leave at least?",
-            options: ["A دوو چرکە", "B سێ چرکە", "C چوار چرکە"],
-            optionsAr: ["أ ثانيتان", "ب ثلاث ثوانٍ", "ج أربع ثوانٍ"],
-            optionsEn: ["A Two seconds", "B Three seconds", "C Four seconds"],
-            correct: 2
-        },
-        {
-            q: "وەک شوفێرێک دەتوانیت زیانێکی زیاتر بە ژینگە بگەیەنیت کاتێک؟",
-            qAr: "كسائق، يمكنك إلحاق ضرر أكبر بالبيئة عندما؟",
-            qEn: "As a driver, you can cause more harm to the environment when?",
-            options: ["A بە خێرایی زۆر لێدەخوڕیت", "B بە لەسەر خۆیی و ئارامی لێدەخوڕیت", "C بە هەڵبژاردنی ئۆتۆمبێلێکی کەم سووتەمەنی"],
-            optionsAr: ["أ تقود بسرعة كبيرة", "ب تقود بهدوء وسلاسة", "ج باختيار سيارة منخفضة استهلاك الوقود"],
-            optionsEn: ["A You drive very fast", "B You drive smoothly and calmly", "C By choosing a fuel-efficient car"],
-            correct: 0
-        },
-        {
-            q: "کەی پێویستە ئاستی ڕۆنی بزوێنەر بپشکنیت؟",
-            qAr: "متى يجب فحص مستوى زيت المحرك؟",
-            qEn: "When should you check the engine oil level?",
-            options: ["A کاتێک بزوێنەری ئۆتۆمبێل لەکاردایە", "B پێش گەشتێکی دوور و درێژ", "C پشکنینی ڕۆنی ئۆتۆمبێل پێویست نییە"],
-            optionsAr: ["أ عندما يعمل محرك السيارة", "ب قبل رحلة طويلة", "ج فحص زيت السيارة غير ضروري"],
-            optionsEn: ["A When the car engine is running", "B Before a long trip", "C Checking car oil is not necessary"],
-            correct: 1
-        },
-        {
-            q: "لەپێشڕەوییەکانی هاتوچۆ؟",
-            qAr: "في أولويات المرور؟",
-            qEn: "In traffic priorities?",
-            options: ["A .سوارڕۆی وەستاو پێشڕەوی هەیە لەسەر سوارڕۆی جواڵو", "B .سوارڕۆی جواڵو پێشڕەوی هەیە لەسەر سوارڕۆی وەستاو", "C .هیچ سوارڕۆیەک پێشڕەوی نییە لەسەر ئەوی تر"],
-            optionsAr: ["أ للمركبة المتوقفة الأولوية على المركبة المتحركة", "ب للمركبة المتحركة الأولوية على المركبة المتوقفة", "ج لا توجد أولوية لأي مركبة على الأخرى"],
-            optionsEn: ["A A stationary vehicle has priority over a moving vehicle", "B A moving vehicle has priority over a stationary vehicle", "C No vehicle has priority over another"],
-            correct: 1
-        },
-        {
-            q: "لە چی کاتێکدا الیتی ڕەماش بەکاردەهێنیت؟",
-            qAr: "متى تستخدم الأضواء الوامضة؟",
-            qEn: "When do you use flashing lights?",
-            options: ["A بۆ ئاگادارکردنەوەی شوفێران لە هەبوونی کامێرای کۆنتڕۆلی تیژڕەوی", "B وەک ساڵو کردن بەکاری دەهێنم", "C بۆ ئەوەی ئاگاداریان بکەمەوە لە بوونی خۆم، وەک هۆڕن بەکاری دەهێنم"],
-            optionsAr: ["أ لتحذير السائقين من وجود كاميرا مراقبة السرعة", "ب أستخدمها كتحية", "ج لأنبههم بوجودي، أستخدمها مثل الهورن"],
-            optionsEn: ["A To warn drivers of speed control cameras", "B I use it as a greeting", "C To alert them to my presence, I use it like a horn"],
-            correct: 0
-        },
-        {
-            q: "پێش ئەوەی بە تونێلێکدا لێبخوڕیت چی بکەیت؟",
-            qAr: "ماذا تفعل قبل الدخول في نفق؟",
-            qEn: "What should you do before entering a tunnel?",
-            options: ["A ڕادیۆکەت بکوژێنەرەوە", "B چاویلکەی خۆر لە چاو البەرە و الیت دابگیرسێنە", "C هۆڕن لێبدە"],
-            optionsAr: ["أ أطفئ الراديو", "ب اخلع نظارة الشمس وأشعل الأضواء", "ج اضغط على الهورن"],
-            optionsEn: ["A Turn off the radio", "B Remove sunglasses and turn on lights", "C Honk the horn"],
-            correct: 1
         }
     ];
 
-let questions = [];
+    let questions = [];
     let currentQ = 0;
     let userName = "";
     let userAnswers = new Array(25).fill(null);
     let timer;
     let timeLeft = 1;
 
-// فەنکشنی تێکەڵکردنی ڕاندۆمی پرسیارەکان (Fisher-Yates Shuffle)
     function shuffleQuestions() {
         questions = JSON.parse(JSON.stringify(questionsBase));
         for (let i = questions.length - 1; i > 0; i--) {
@@ -1402,21 +1095,19 @@ let questions = [];
         }
     }
 
-function checkActivation() {
+    function checkActivation() {
         const input = document.getElementById('activation-code-input');
         const msg = document.getElementById('activation-msg');
         const code = input.value.trim();
         const t = translations[currentLanguage];
 
-if (code === "22@@99") {
+        if (code === "22@@99") {
             msg.className = "activation-msg success";
             msg.innerText = t.activationSuccess;
-
-document.getElementById('form-number').value = '';
+            document.getElementById('form-number').value = '';
             document.getElementById('full-name').value = '';
 
-setTimeout(() => {
-                // شاردنەوەی ئەکتیڤکردن و پیشاندانی هەڵبژاردنی زمان
+            setTimeout(() => {
                 document.getElementById('activation-gate').style.display = 'none';
                 document.getElementById('language-selector').style.display = 'flex';
             }, 800);
@@ -1426,103 +1117,34 @@ setTimeout(() => {
         }
     }
 
-function toggleActivationVisibility() {
+    function toggleActivationVisibility() {
         const input = document.getElementById('activation-code-input');
-        if (input.type === "password") {
-            input.type = "text";
-        } else {
-            input.type = "password";
-        }
+        input.type = input.type === "password" ? "text" : "password";
     }
 
-function pressKey(val) {
-        const input = document.getElementById('form-number');
-        input.value += val;
-    }
+    function pressKey(val) { document.getElementById('form-number').value += val; }
+    function deleteKey() { const input = document.getElementById('form-number'); input.value = input.value.slice(0, -1); }
+    function clearKey() { document.getElementById('form-number').value = ''; }
 
-function deleteKey() {
-        const input = document.getElementById('form-number');
-        input.value = input.value.slice(0, -1);
-    }
-
-function clearKey() {
-        const input = document.getElementById('form-number');
-        input.value = '';
-    }
-
-document.addEventListener('keydown', function(e) {
-        const activationGate = document.getElementById('activation-gate');
-        if (activationGate && window.getComputedStyle(activationGate).display !== 'none') {
-            return;
-        }
-
-const loginBox = document.getElementById('login-box');
-        if (!loginBox || window.getComputedStyle(loginBox).display === 'none') {
-            return;
-        }
-
-const input = document.getElementById('form-number');
-        if (document.activeElement !== input) {
-            if (document.activeElement && document.activeElement.tagName === 'INPUT') {
-                return;
-            }
-            if (e.key >= '0' && e.key <= '9') {
-                input.value += e.key;
-            } else if (e.key === 'Backspace') {
-                deleteKey();
-            } else if (e.key === 'Enter') {
-                searchForm();
-            }
-        } else {
-            if (e.key === 'Enter') {
-                searchForm();
-            }
-        }
-    });
-
-const studentForms = {
+    const studentForms = {
         "2026": "نوسینگەی شوفێری مەهتاب",
         "95577": "دنیا محمد قادر",
         "94097": "ایرج نجف کیامینش",
         "92651": "ئاسۆ اسکندر رحمان",
-        "94411": "محمد عمر جلال",
-        "94387": "مەبەست سعید محمد",
-        "38474": "دیاری بارزان قادر",
-        "94645": "ایاد سامان علی",
-        "94810": "عزیز نزار مولود",
-        "94811": "هەلمەت ستار جبار",
-        "94839": "مەبەست جودت کانبی",
-        "54566": "اسعد کاظم اسماعیل",
-        "94945": "سانا یاسین احمد",
-        "95004": "رەوەند پشتیوان مراد",
-        "9503": "شاد عصام حمید",
-        "93838": "نوزاد حسن قادر",
-        "95215": "ڕەوا احمد نورالدین",
-        "95179": "عبدللە یونس طە",
-        "94924": "یاد دلیر سالار",
-        "95405": "رشوان محمود احمد",
-        "95047": "الاء زیاد العمار",
-        "73059": "دیلان عبدللە حمە صالح",
-        "9557": "دنیا محمد قادر",
-        "95674": "عبدللە عثمان محمد امین",
-        "95631": "اواز خوانجە یونس",
-        "95473": "دانا خضر احمد",
-        "95471": "محمد همداد لطیف"
+        "94411": "محمد عمر جلال"
     };
 
-function searchForm() {
+    function searchForm() {
         const t = translations[currentLanguage];
         let formNum = document.getElementById('form-number').value.trim();
-        formNum = formNum.replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d));
-
-if(studentForms[formNum]) {
+        if(studentForms[formNum]) {
             document.getElementById('full-name').value = studentForms[formNum];
         } else {
             alert(t.alertFormError);
         }
     }
 
-function initGrid() {
+    function initGrid() {
         const grid = document.getElementById('grid-container');
         grid.innerHTML = '';
         for(let i = 1; i <= 25; i++) {
@@ -1534,7 +1156,7 @@ function initGrid() {
         }
     }
 
-function startQuiz() {
+    function startQuiz() {
         const t = translations[currentLanguage];
         const nameInput = document.getElementById('full-name').value.trim();
         if(!nameInput) {
@@ -1542,18 +1164,14 @@ function startQuiz() {
             return;
         }
         userName = nameInput;
-        
-        // تێکەڵکردنی پرسیارەکان بۆ هەر تاقیکردنەوەیەک
         shuffleQuestions();
-        
         document.getElementById('login-box').style.display = 'none';
         document.getElementById('quiz-box').style.display = 'flex';
-        
         initGrid();
         loadQuestion(0);
     }
 
-function startTimer() {
+    function startTimer() {
         clearInterval(timer);
         timeLeft = 1;
         document.getElementById('timer-display').innerText = timeLeft;
@@ -1568,12 +1186,12 @@ function startTimer() {
         }, 1000);
     }
 
-function loadQuestion(index) {
+    function loadQuestion(index) {
         currentQ = index;
-        const qData = questions[index];
+        const qData = questions[index % questions.length];
         const t = translations[currentLanguage];
 
-let questionText = qData.q;
+        let questionText = qData.q;
         let optionsArray = qData.options;
         
         if(currentLanguage === 'ar') {
@@ -1584,9 +1202,9 @@ let questionText = qData.q;
             optionsArray = qData.optionsEn || qData.options;
         }
 
-document.getElementById('question-title').innerText = t.questionPrefix + (index + 1) + ": " + questionText;
+        document.getElementById('question-title').innerText = t.questionPrefix + (index + 1) + ": " + questionText;
 
-const imgContainer = document.getElementById('q-img-container');
+        const imgContainer = document.getElementById('q-img-container');
         const imgEl = document.getElementById('q-img');
         if(qData.image) {
             imgEl.src = qData.image;
@@ -1596,51 +1214,39 @@ const imgContainer = document.getElementById('q-img-container');
             imgEl.src = '';
         }
 
-document.getElementById('opt0').innerText = optionsArray[0];
+        document.getElementById('opt0').innerText = optionsArray[0];
         document.getElementById('opt1').innerText = optionsArray[1];
         document.getElementById('opt2').innerText = optionsArray[2];
 
-const btns = document.querySelectorAll('.option-btn');
-        btns.forEach(btn => {
-            btn.className = 'option-btn';
-        });
+        document.querySelectorAll('.option-btn').forEach(btn => btn.className = 'option-btn');
 
-for(let i = 0; i < 25; i++) {
+        for(let i = 0; i < 25; i++) {
             const gridEl = document.getElementById('grid-' + i);
-            if(i === index) {
-                gridEl.classList.add('current');
-            } else {
-                gridEl.classList.remove('current');
-            }
+            if(i === index) gridEl.classList.add('current');
+            else gridEl.classList.remove('current');
         }
 
-startTimer();
+        startTimer();
     }
 
-function selectAnswer(optionIndex) {
+    function selectAnswer(optionIndex) {
         clearInterval(timer);
-        const qData = questions[currentQ];
+        const qData = questions[currentQ % questions.length];
         const gridEl = document.getElementById('grid-' + currentQ);
 
-const isCorrect = (optionIndex === qData.correct);
+        const isCorrect = (optionIndex === qData.correct);
         userAnswers[currentQ] = isCorrect;
 
-if(isCorrect) {
-            gridEl.classList.add('correct');
-        } else {
-            gridEl.classList.add('wrong');
-        }
+        if(isCorrect) gridEl.classList.add('correct');
+        else gridEl.classList.add('wrong');
 
-const btns = document.querySelectorAll('.option-btn');
+        const btns = document.querySelectorAll('.option-btn');
         if(optionIndex >= 0 && optionIndex < 3) {
-            if(isCorrect) {
-                btns[optionIndex].classList.add('selected-correct');
-            } else {
-                btns[optionIndex].classList.add('selected-wrong');
-            }
+            if(isCorrect) btns[optionIndex].classList.add('selected-correct');
+            else btns[optionIndex].classList.add('selected-wrong');
         }
 
-setTimeout(() => {
+        setTimeout(() => {
             if(currentQ < 24) {
                 loadQuestion(currentQ + 1);
             } else {
@@ -1649,20 +1255,20 @@ setTimeout(() => {
         }, 400);
     }
 
-function showResults() {
+    function showResults() {
         document.getElementById('quiz-box').style.display = 'none';
         document.getElementById('result-box').style.display = 'block';
 
-let correctCount = userAnswers.filter(ans => ans === true).length;
+        let correctCount = userAnswers.filter(ans => ans === true).length;
         let wrongCount = 25 - correctCount;
 
-const msgEl = document.getElementById('result-msg');
+        const msgEl = document.getElementById('result-msg');
         const scoreEl = document.getElementById('score-display');
         const t = translations[currentLanguage];
 
-scoreEl.innerText = correctCount + " / 25";
+        scoreEl.innerText = correctCount + " / 25";
 
-if(wrongCount <= 5) {
+        if(wrongCount <= 5) {
             msgEl.className = 'result-title pass';
             msgEl.innerText = t.resultPass.replace('{name}', userName);
         } else {
@@ -1671,7 +1277,7 @@ if(wrongCount <= 5) {
         }
     }
 
-function restartQuiz() {
+    function restartQuiz() {
         currentQ = 0;
         userAnswers = new Array(25).fill(null);
         document.getElementById('result-box').style.display = 'none';
@@ -1679,814 +1285,7 @@ function restartQuiz() {
         document.getElementById('form-number').value = '';
         document.getElementById('full-name').value = '';
     }
-//]]>
 </script>
-
-<!-- ===================== ژووری بەڕێوبەر (Admin Room) : دەستپێک ===================== -->
-<style>
-.adm-gear{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(0,242,254,0.55);background:rgba(15,23,42,0.92);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 0 10px rgba(0,242,254,0.25);transition:all 0.2s ease}
-.adm-gear:hover{box-shadow:0 0 18px rgba(0,242,254,0.6);border-color:var(--led-cyan)}
-.adm-overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-index:99999;background:rgba(4,8,16,0.95);overflow-y:auto;direction:rtl;padding:14px;display:none;text-align:right}
-.adm-card{max-width:640px;margin:0 auto;background:#0e1628;border:1.5px solid rgba(0,242,254,0.45);border-radius:20px;box-shadow:0 0 30px rgba(0,242,254,0.25);color:#f8fafc;overflow:hidden}
-.adm-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(11,17,32,0.9)}
-.adm-title{font-size:17px;font-weight:800}
-.adm-x{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,51,102,0.6);background:rgba(63,29,40,0.8);color:#fff;font-size:16px;cursor:pointer;padding:0}
-.adm-pad{padding:18px 16px}
-.adm-field{margin-bottom:12px}
-.adm-field label{display:block;font-size:13px;font-weight:700;color:#cbd5e1;margin-bottom:5px}
-.adm-in{width:100%;padding:10px 12px;border:1.5px solid rgba(255,255,255,0.15);border-radius:10px;background:rgba(15,23,42,0.9);color:#fff;font-size:15px;font-weight:600;outline:none;transition:all 0.2s ease}
-.adm-in:focus{border-color:var(--led-cyan);box-shadow:0 0 12px rgba(0,242,254,0.35)}
-.adm-ltr{direction:ltr;text-align:left}
-textarea.adm-in{min-height:70px;resize:vertical}
-.adm-btn{padding:10px 16px;border-radius:12px;border:1.5px solid rgba(0,242,254,0.6);background:linear-gradient(135deg,#1e293b,#0f172a);color:#fff;font-size:14px;font-weight:800;cursor:pointer;transition:all 0.2s ease}
-.adm-btn:hover{box-shadow:0 0 16px rgba(0,242,254,0.45);transform:translateY(-1px)}
-.adm-btn.green{border-color:rgba(0,255,135,0.65)}
-.adm-btn.green:hover{box-shadow:0 0 16px rgba(0,255,135,0.45)}
-.adm-btn.red{border-color:rgba(255,51,102,0.65)}
-.adm-btn.ghost{border-color:rgba(255,255,255,0.25);background:transparent}
-.adm-link{background:none;border:none;color:var(--led-cyan);cursor:pointer;font-size:13px;font-weight:700;text-decoration:underline;padding:6px}
-.adm-eye{position:absolute;left:8px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:16px;padding:4px}
-.adm-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
-.adm-msg{display:none;padding:9px 12px;border-radius:10px;font-size:13px;font-weight:700;margin:10px 0}
-.adm-msg.ok{background:rgba(16,185,129,0.15);border:1px solid #10b981;color:#34d399}
-.adm-msg.err{background:rgba(239,68,68,0.15);border:1px solid #ef4444;color:#f87171}
-.adm-warn{margin:12px 16px 0;padding:9px 12px;border-radius:10px;background:rgba(255,170,0,0.12);border:1px solid #ffaa00;color:#ffcc66;font-size:12.5px;font-weight:700;line-height:1.7}
-.adm-hint{font-size:12.5px;color:#94a3b8;line-height:1.7;margin-bottom:10px}
-.adm-tabs{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.adm-tab{padding:8px 12px;border-radius:10px;border:1.5px solid rgba(255,255,255,0.15);background:transparent;color:#cbd5e1;font-size:13px;font-weight:800;cursor:pointer}
-.adm-tab.on{border-color:var(--led-cyan);background:#0f172a;color:#fff;box-shadow:0 0 12px rgba(0,242,254,0.35)}
-.adm-tab.adm-out{margin-right:auto;border-color:rgba(255,51,102,0.5)}
-.adm-scroll{max-height:52vh;overflow-y:auto;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:4px}
-.adm-table{width:100%;border-collapse:collapse}
-.adm-table th{font-size:12px;color:#94a3b8;padding:6px 4px;text-align:center}
-.adm-table td{padding:3px}
-.adm-num{width:34px;text-align:center;font-size:12px;color:#94a3b8;font-weight:700}
-.adm-count{font-size:12.5px;color:#94a3b8;margin-top:8px;font-weight:700}
-.adm-opt{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.adm-opt span.adm-let{width:26px;text-align:center;font-weight:900;color:var(--led-cyan)}
-.adm-opt input.adm-radio{width:20px;height:20px;flex-shrink:0}
-.adm-details{margin:12px 0;border:1px dashed rgba(255,255,255,0.2);border-radius:10px;padding:8px 10px}
-.adm-details summary{cursor:pointer;font-weight:800;font-size:13px;color:#cbd5e1}
-.adm-sub{font-size:12px;font-weight:800;color:var(--led-amber);margin:10px 0 5px}
-.adm-prev{max-width:100%;max-height:130px;border-radius:10px;border:1.5px solid rgba(0,242,254,0.3);margin-top:8px;display:none}
-.adm-qitem{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid rgba(255,255,255,0.1);border-radius:12px;margin-bottom:8px;background:rgba(15,23,42,0.6)}
-.adm-qitem img{width:56px;height:56px;object-fit:contain;border-radius:8px;flex-shrink:0;background:#fff}
-.adm-qinfo{flex:1;font-size:13px;font-weight:700;line-height:1.6}
-.adm-qinfo small{display:block;color:#34d399;font-weight:800}
-#adm-review{margin-top:18px;text-align:right}
-.rv-q{background:rgba(15,23,42,0.85);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px;margin-bottom:10px}
-.rv-t{font-size:14px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.6}
-.rv-img{max-width:100%;max-height:110px;border-radius:8px;display:block;margin:0 auto 8px;background:#fff}
-.rv-o{padding:8px 10px;border-radius:8px;margin-bottom:5px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,0.08);color:#cbd5e1}
-.rv-o.rv-ok{background:rgba(16,185,129,0.18);border-color:#10b981;color:#6ee7b7}
-.rv-o.rv-bad{background:rgba(239,68,68,0.18);border-color:#ef4444;color:#fca5a5}
-.rv-tag{font-size:11px;font-weight:900;opacity:0.9;margin:0 6px}
-.rv-none{font-size:12px;font-weight:800;color:#fbbf24;margin-top:4px}
-</style>
-
-<script type='text/javascript'>
-//<![CDATA[
-(function () {
-
-  /* ====================== ڕێکخستنەکان (تەنها ئەمە دەستکاری بکە) ====================== */
-  var CFG = {
-    // ١) ناونیشانی داتابەیسی Firebase Realtime Database (بۆ ئەوەی گۆڕانکارییەکان بۆ هەموو کەسێک دەرکەون)
-    //    نموونە: 'https://ناوی-پرۆژەکەت-default-rtdb.firebaseio.com'
-    DB_URL: '',
-
-    // ٢) ڕێکخستنی EmailJS بۆ ناردنی کۆدی لەبیرچوونەوەی پاسۆرد بۆ ئیمەیڵ
-    EMAILJS_SERVICE_ID: 'service_pxyev74',
-    EMAILJS_TEMPLATE_ID: 'template_z7cfu5m',
-    EMAILJS_PUBLIC_KEY: 'nJiQr0pWoqarLAHQk',
-
-    // ٣) زانیاری بەڕێوبەر (پاسۆرد وەک هاش SHA-256 هەڵگیراوە، نەک ڕاستەوخۆ)
-    ADMIN_USER: 'crash_cr4',
-    ADMIN_PASS_HASH: '5db04f18e899a4cf9bda9ce81a7f161a2919df475c32276bafd17cc0c03e6c95',
-    ADMIN_EMAIL: 'hamagold2266@gmail.com',
-
-    // کۆدی ئەکتیڤی بنەڕەتی (هەتا کاتێک لە ژووری بەڕێوبەر نەیگۆڕیت)
-    DEFAULT_ACTIVATION: '22@@99',
-    QUIZ_SIZE: 25
-  };
-
-  /* ====================== یاریدەدەرەکان ====================== */
-  function $(id) { return document.getElementById(id); }
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  }
-  function sha(str) {
-    var enc = new TextEncoder().encode(str);
-    return crypto.subtle.digest('SHA-256', enc).then(function (b) {
-      return Array.prototype.map.call(new Uint8Array(b), function (x) { return ('0' + x.toString(16)).slice(-2); }).join('');
-    });
-  }
-  function hashPass(p) { return sha(p + '|crash-admin'); }
-  function normDigits(s) {
-    return String(s).replace(/[٠-٩]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.indexOf(d); })
-                    .replace(/[۰-۹]/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d); });
-  }
-  function toArr(x) {
-    if (!x) return [];
-    if (Array.isArray(x)) return x.filter(function (v) { return v != null; });
-    return Object.keys(x).sort(function (a, b) { return Number(a) - Number(b); }).map(function (k) { return x[k]; });
-  }
-  function maskEmail(e) {
-    var p = e.split('@');
-    return p[0].slice(0, 2) + '*****@' + p[1];
-  }
-
-  /* ====================== داتا (Firebase یان localStorage) ====================== */
-  var LS_KEY = 'crashquiz_data_v1';
-  var QD = {};
-
-  function dbUrl() { return CFG.DB_URL.replace(/\/+$/, '') + '/crashquiz.json'; }
-  function dbRead() {
-    if (CFG.DB_URL) {
-      return fetch(dbUrl(), { cache: 'no-store' }).then(function (r) {
-        if (!r.ok) throw new Error('http ' + r.status);
-        return r.json();
-      }).then(function (d) { return d || {}; });
-    }
-    try { return Promise.resolve(JSON.parse(localStorage.getItem(LS_KEY) || '{}')); }
-    catch (e) { return Promise.resolve({}); }
-  }
-  function dbPatch(obj) {
-    if (CFG.DB_URL) {
-      return fetch(dbUrl(), { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(obj) })
-        .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); });
-    }
-    return dbRead().then(function (d) {
-      Object.keys(obj).forEach(function (k) { if (obj[k] === null) { delete d[k]; } else { d[k] = obj[k]; } });
-      localStorage.setItem(LS_KEY, JSON.stringify(d));
-      return d;
-    });
-  }
-
-  function applyData(d) {
-    QD = d || {};
-    var st = QD.students, obj = {};
-    if (Array.isArray(st)) { st.forEach(function (v, i) { if (v != null) obj[i] = v; }); }
-    else if (st && typeof st === 'object') { obj = st; }
-    if (Object.keys(obj).length) {
-      Object.keys(studentForms).forEach(function (k) { delete studentForms[k]; });
-      Object.keys(obj).forEach(function (k) { studentForms[k] = obj[k]; });
-    }
-  }
-  function refreshData() {
-    return dbRead().then(function (d) { applyData(d); return true; }).catch(function () { return false; });
-  }
-  function customList() {
-    var q = QD.questions || {};
-    return Object.keys(q).sort().map(function (k) { var o = q[k]; o.id = k; return o; });
-  }
-  function currentAct() {
-    return (QD.activationCode != null && String(QD.activationCode) !== '') ? String(QD.activationCode) : CFG.DEFAULT_ACTIVATION;
-  }
-
-  /* ====================== بەستنەوە بە کۆدی ئەسڵی (بێ گۆڕینی فایلەکە) ====================== */
-
-  // ١) کۆدی ئەکتیڤ لە داتابەیسەوە دەخوێنرێتەوە
-  window.checkActivation = function () {
-    var input = $('activation-code-input');
-    var msgEl = $('activation-msg');
-    var code = input.value.trim();
-    var t = translations[currentLanguage];
-    var wait = new Promise(function (r) { setTimeout(r, 4000); });
-    Promise.race([refreshData(), wait]).then(function () {
-      if (code === currentAct()) {
-        msgEl.className = 'activation-msg success';
-        msgEl.innerText = t.activationSuccess;
-        $('form-number').value = '';
-        $('full-name').value = '';
-        setTimeout(function () {
-          $('activation-gate').style.display = 'none';
-          $('language-selector').style.display = 'flex';
-        }, 800);
-      } else {
-        msgEl.className = 'activation-msg error';
-        msgEl.innerText = t.activationError;
-      }
-    });
-  };
-
-  // ٢) پرسیارە زیادکراوەکان تێکەڵ دەکرێن لەگەڵ پرسیارە ئەسڵییەکان و ٢٥ دانە هەڵدەبژێردرێت
-  //    ئەگەر لیستی ئێستا (٢٥ پرسیارە ئەسڵییەکە) هێنرابێت بۆ ژووری بەڕێوبەر، دیگە پرسیارە ئەسڵییەکان دووبارە نابنەوە
-  window.shuffleQuestions = function () {
-    var base = QD.baseImported ? [] : JSON.parse(JSON.stringify(questionsBase));
-    var pool = base.concat(JSON.parse(JSON.stringify(customList())));
-    for (var i = pool.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
-    }
-    questions = pool.slice(0, CFG.QUIZ_SIZE);
-  };
-
-  // ٣) تۆمارکردنی وەڵامی هەڵبژێردراو بۆ پیشاندانی وەڵامی ڕاست لە ئەنجامی کۆتایی
-  var choices = [];
-  var _startQuiz = window.startQuiz;
-  window.startQuiz = function () {
-    choices = new Array(CFG.QUIZ_SIZE).fill(null);
-    _startQuiz.apply(this, arguments);
-  };
-  var _selectAnswer = window.selectAnswer;
-  window.selectAnswer = function (i) {
-    choices[currentQ] = i;
-    _selectAnswer.apply(this, arguments);
-  };
-  var _showResults = window.showResults;
-  window.showResults = function () {
-    _showResults.apply(this, arguments);
-    renderReview();
-  };
-  var _restartQuiz = window.restartQuiz;
-  window.restartQuiz = function () {
-    var old = $('adm-review');
-    if (old) old.remove();
-    choices = [];
-    _restartQuiz.apply(this, arguments);
-  };
-
-  var REV = {
-    ku: { show: 'بینینی وەڵامە ڕاستەکان', hide: 'شاردنەوەی وەڵامەکان', yours: 'وەڵامی تۆ', none: 'وەڵامت نەدا' },
-    ar: { show: 'عرض الإجابات الصحيحة', hide: 'إخفاء الإجابات', yours: 'إجابتك', none: 'لم تجب' },
-    en: { show: 'Show correct answers', hide: 'Hide answers', yours: 'Your answer', none: 'No answer' }
-  };
-
-  function renderReview() {
-    var rb = $('result-box');
-    var old = $('adm-review');
-    if (old) old.remove();
-    var L = REV[currentLanguage] || REV.ku;
-    var rtl = currentLanguage !== 'en';
-    var w = document.createElement('div');
-    w.id = 'adm-review';
-    w.style.direction = rtl ? 'rtl' : 'ltr';
-    w.style.textAlign = rtl ? 'right' : 'left';
-
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'adm-btn';
-    btn.textContent = L.show;
-    var list = document.createElement('div');
-    list.style.display = 'none';
-    list.style.marginTop = '12px';
-
-    var html = '';
-    questions.forEach(function (q, i) {
-      var opts = q.options, qt = q.q;
-      if (currentLanguage === 'ar') { opts = q.optionsAr || q.options; qt = q.qAr || q.q; }
-      else if (currentLanguage === 'en') { opts = q.optionsEn || q.options; qt = q.qEn || q.q; }
-      var ch = choices[i];
-      html += '<div class="rv-q"><div class="rv-t">' + (i + 1) + '. ' + esc(qt) + '</div>';
-      if (q.image) html += '<img class="rv-img" src="' + esc(q.image) + '" alt=""/>';
-      for (var k = 0; k < 3; k++) {
-        var cls = 'rv-o';
-        if (k === q.correct) cls += ' rv-ok';
-        else if (k === ch) cls += ' rv-bad';
-        html += '<div class="' + cls + '">' + (k === q.correct ? '✔ ' : '') + esc(opts[k]) +
-                (k === ch ? '<span class="rv-tag">(' + L.yours + ')</span>' : '') + '</div>';
-      }
-      if (ch === -1 || ch == null) html += '<div class="rv-none">' + L.none + '</div>';
-      html += '</div>';
-    });
-    list.innerHTML = html;
-
-    btn.addEventListener('click', function () {
-      var open = list.style.display !== 'none';
-      list.style.display = open ? 'none' : 'block';
-      btn.textContent = open ? L.show : L.hide;
-    });
-    w.appendChild(btn);
-    w.appendChild(list);
-    rb.appendChild(w);
-  }
-
-  /* ====================== پەنجەرەی ژووری بەڕێوبەر ====================== */
-  var isAdmin = false;
-  var resetState = null;
-  var lastSend = 0;
-  var prevOverflow = '';
-  var pendingImg = '';
-
-  function ensureOverlay() {
-    if ($('adm-overlay')) return;
-    var o = document.createElement('div');
-    o.id = 'adm-overlay';
-    o.className = 'adm-overlay';
-    o.innerHTML = '<div class="adm-card"><div class="adm-head"><div class="adm-title" id="adm-title">ژووری بەڕێوبەر</div>' +
-                  '<button type="button" class="adm-x" id="adm-close">✕</button></div><div id="adm-body"></div></div>';
-    document.body.appendChild(o);
-    $('adm-close').addEventListener('click', closeAdmin);
-  }
-  function openAdmin() {
-    ensureOverlay();
-    prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    $('adm-overlay').style.display = 'block';
-    $('adm-overlay').scrollTop = 0;
-    isAdmin = false;
-    showLogin();
-  }
-  function closeAdmin() {
-    $('adm-overlay').style.display = 'none';
-    document.body.style.overflow = prevOverflow;
-    isAdmin = false;
-    resetState = null;
-    $('adm-body').innerHTML = '';
-  }
-  function setTitle(t) { $('adm-title').textContent = t; }
-  function msg(text, ok) {
-    var m = $('adm-msg');
-    if (!m) return;
-    m.className = 'adm-msg ' + (ok ? 'ok' : 'err');
-    m.textContent = text;
-    m.style.display = 'block';
-  }
-
-  /* ---------- چوونەژوورەوە ---------- */
-  function showLogin() {
-    setTitle('ژووری بەڕێوبەر');
-    $('adm-body').innerHTML =
-      '<div class="adm-pad">' +
-      '<div class="adm-field"><label>ناوی بەکارهێنەر</label><input class="adm-in adm-ltr" id="adm-user" autocomplete="off" autocapitalize="off"/></div>' +
-      '<div class="adm-field"><label>پاسۆرد</label><div style="position:relative"><input class="adm-in adm-ltr" id="adm-pass" type="password" autocomplete="off" style="padding-left:38px"/>' +
-      '<button type="button" class="adm-eye" id="adm-eye">👁️</button></div></div>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<div class="adm-row" style="justify-content:space-between"><button type="button" class="adm-btn" id="adm-login">چوونەژوورەوە</button>' +
-      '<button type="button" class="adm-link" id="adm-forgot">پاسۆردم لەبیرچووە؟</button></div></div>';
-    $('adm-eye').addEventListener('click', function () {
-      var p = $('adm-pass'); p.type = (p.type === 'password') ? 'text' : 'password';
-    });
-    $('adm-login').addEventListener('click', doLogin);
-    $('adm-pass').addEventListener('keydown', function (e) { if (e.key === 'Enter') doLogin(); });
-    $('adm-user').addEventListener('keydown', function (e) { if (e.key === 'Enter') doLogin(); });
-    $('adm-forgot').addEventListener('click', showForgot1);
-    $('adm-user').focus();
-  }
-  function doLogin() {
-    var u = $('adm-user').value.trim();
-    var p = $('adm-pass').value;
-    if (!u || !p) { msg('ناوی بەکارهێنەر و پاسۆرد بنووسە', false); return; }
-    msg('چاوەڕێ بکە ...', true);
-    Promise.all([hashPass(p), dbRead()]).then(function (r) {
-      var expect = r[1].passHash || CFG.ADMIN_PASS_HASH;
-      if (u === CFG.ADMIN_USER && r[0] === expect) {
-        QD = r[1];
-        isAdmin = true;
-        showDash('act');
-      } else {
-        msg('ناوی بەکارهێنەر یان پاسۆرد هەڵەیە', false);
-      }
-    }).catch(function () { msg('نەتوانرا پەیوەندی بە داتابەیس بکرێت', false); });
-  }
-
-  /* ---------- لەبیرچوونەوەی پاسۆرد ---------- */
-  function showForgot1() {
-    setTitle('گۆڕینی پاسۆرد');
-    $('adm-body').innerHTML =
-      '<div class="adm-pad"><p class="adm-hint">کۆدێکی ٦ ژمارەیی دەنێردرێت بۆ ئیمەیڵی بەڕێوبەر:</p>' +
-      '<p class="adm-ltr" style="font-weight:800;margin-bottom:12px;direction:ltr;text-align:center">' + esc(maskEmail(CFG.ADMIN_EMAIL)) + '</p>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<div class="adm-row" style="justify-content:space-between"><button type="button" class="adm-btn green" id="adm-send">ناردنی کۆد</button>' +
-      '<button type="button" class="adm-link" id="adm-back">گەڕانەوە</button></div></div>';
-    $('adm-send').addEventListener('click', sendResetCode);
-    $('adm-back').addEventListener('click', showLogin);
-  }
-  function sendResetCode() {
-    if (!CFG.EMAILJS_SERVICE_ID || !CFG.EMAILJS_TEMPLATE_ID || !CFG.EMAILJS_PUBLIC_KEY) {
-      msg('ناردنی ئیمەیڵ هێشتا ڕێکنەخراوە (EmailJS). ڕێنماییەکە بخوێنەوە.', false);
-      return;
-    }
-    if (Date.now() - lastSend < 60000) { msg('تکایە یەک خولەک چاوەڕێ بکە پێش ناردنەوە', false); return; }
-    var code = String(100000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 900000));
-    msg('کۆد دەنێردرێت ...', true);
-    sha(code + '|reset').then(function (h) {
-      return fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          service_id: CFG.EMAILJS_SERVICE_ID,
-          template_id: CFG.EMAILJS_TEMPLATE_ID,
-          user_id: CFG.EMAILJS_PUBLIC_KEY,
-          template_params: { to_email: CFG.ADMIN_EMAIL, email: CFG.ADMIN_EMAIL, code: code }
-        })
-      }).then(function (r) {
-        if (!r.ok) throw new Error('mail');
-        lastSend = Date.now();
-        resetState = { hash: h, exp: Date.now() + 10 * 60 * 1000, tries: 0 };
-        showForgot2();
-      });
-    }).catch(function () { msg('ناردنی ئیمەیڵ سەرنەکەوت. ڕێکخستنەکانی EmailJS بپشکنە.', false); });
-  }
-  function showForgot2() {
-    setTitle('گۆڕینی پاسۆرد');
-    $('adm-body').innerHTML =
-      '<div class="adm-pad"><p class="adm-hint">کۆدەکە نێردرا بۆ ' + esc(maskEmail(CFG.ADMIN_EMAIL)) + ' (١٠ خولەک کاردەکات)</p>' +
-      '<div class="adm-field"><label>کۆدی ئیمەیڵ</label><input class="adm-in adm-ltr" id="adm-code" inputmode="numeric" maxlength="6" autocomplete="off"/></div>' +
-      '<div class="adm-field"><label>پاسۆردی نوێ (لانی کەم ٦ پیت)</label><input class="adm-in adm-ltr" id="adm-np1" type="password" autocomplete="new-password"/></div>' +
-      '<div class="adm-field"><label>دووبارەکردنەوەی پاسۆردی نوێ</label><input class="adm-in adm-ltr" id="adm-np2" type="password" autocomplete="new-password"/></div>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<div class="adm-row" style="justify-content:space-between"><button type="button" class="adm-btn green" id="adm-setpw">گۆڕینی پاسۆرد</button>' +
-      '<button type="button" class="adm-link" id="adm-back2">گەڕانەوە</button></div></div>';
-    $('adm-setpw').addEventListener('click', verifyAndSetPassword);
-    $('adm-back2').addEventListener('click', showLogin);
-  }
-  function verifyAndSetPassword() {
-    var code = normDigits($('adm-code').value.trim());
-    var p1 = $('adm-np1').value, p2 = $('adm-np2').value;
-    if (!resetState || Date.now() > resetState.exp) { msg('کۆدەکە بەسەرچووە، دووبارە بینێرە', false); return; }
-    if (resetState.tries >= 5) { resetState = null; msg('هەوڵەکان زۆر بوون، کۆدێکی نوێ بینێرە', false); return; }
-    if (!/^[0-9]{6}$/.test(code)) { msg('کۆدەکە ٦ ژمارەیە', false); return; }
-    if (p1.length < 6) { msg('پاسۆرد لانی کەم ٦ پیت بێت', false); return; }
-    if (p1 !== p2) { msg('پاسۆردەکان وەک یەک نین', false); return; }
-    resetState.tries++;
-    Promise.all([sha(code + '|reset'), hashPass(p1)]).then(function (r) {
-      if (r[0] !== resetState.hash) { msg('کۆدەکە هەڵەیە', false); return; }
-      return dbPatch({ passHash: r[1] }).then(function () {
-        resetState = null;
-        msg('پاسۆردی نوێ پاشەکەوت کرا. ئێستا بچۆ ژوورەوە.', true);
-        setTimeout(showLogin, 1600);
-      });
-    }).catch(function () { msg('پاشەکەوتکردن سەرنەکەوت', false); });
-  }
-
-  /* ---------- داشبۆرد ---------- */
-  function showDash(tab) {
-    setTitle('ژووری بەڕێوبەر');
-    var warn = CFG.DB_URL ? '' :
-      '<div class="adm-warn">⚠️ داتابەیس (DB_URL) ڕێکنەخراوە. گۆڕانکارییەکان تەنها لەم ئامێرە و ئەم وێبگەڕەدا دەمێننەوە و بۆ بەکارهێنەرانی تر دەرناکەون.</div>';
-    var tabs = [['act', '🔑 کۆدی ئەکتیڤ'], ['stu', '👥 فۆرم و ناو'], ['qs', '❓ پرسیارەکان']];
-    $('adm-body').innerHTML =
-      '<div class="adm-tabs">' +
-      tabs.map(function (t) { return '<button type="button" class="adm-tab' + (t[0] === tab ? ' on' : '') + '" data-tab="' + t[0] + '">' + t[1] + '</button>'; }).join('') +
-      '<button type="button" class="adm-tab adm-out" id="adm-logout">🚪 دەرچوون</button></div>' + warn +
-      '<div class="adm-pad" id="adm-pane"></div>';
-    var tb = document.querySelectorAll('.adm-tab[data-tab]');
-    for (var i = 0; i < tb.length; i++) {
-      tb[i].addEventListener('click', function () { showDash(this.getAttribute('data-tab')); });
-    }
-    $('adm-logout').addEventListener('click', function () { isAdmin = false; showLogin(); });
-    if (tab === 'act') paneAct();
-    else if (tab === 'stu') paneStu();
-    else paneQs();
-  }
-
-  /* ---------- کۆدی ئەکتیڤ ---------- */
-  function paneAct() {
-    $('adm-pane').innerHTML =
-      '<div class="adm-field"><label>کۆدی ئەکتیڤی ئێستا (دەتوانیت بیگۆڕیت)</label>' +
-      '<input class="adm-in adm-ltr" id="adm-act" autocomplete="off" value="' + esc(currentAct()) + '"/></div>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<button type="button" class="adm-btn green" id="adm-act-save">💾 پاشەکەوتکردنی کۆد</button>';
-    $('adm-act-save').addEventListener('click', function () {
-      var v = $('adm-act').value.trim();
-      if (!v) { msg('کۆدەکە بەتاڵە', false); return; }
-      dbPatch({ activationCode: v }).then(function () {
-        QD.activationCode = v;
-        msg('کۆدی ئەکتیڤ گۆڕدرا', true);
-      }).catch(function () { msg('پاشەکەوتکردن سەرنەکەوت', false); });
-    });
-  }
-
-  /* ---------- فۆرم و ناوی سیانی ---------- */
-  function paneStu() {
-    var d = toArr(QD.draft), rows = '';
-    for (var i = 0; i < 100; i++) {
-      var r = d[i] || {};
-      rows += '<tr><td class="adm-num">' + (i + 1) + '</td>' +
-              '<td><input class="adm-in adm-ltr adm-f" inputmode="numeric" maxlength="15" value="' + esc(r.f || '') + '"/></td>' +
-              '<td><input class="adm-in adm-n" value="' + esc(r.n || '') + '"/></td></tr>';
-    }
-    $('adm-pane').innerHTML =
-      '<p class="adm-hint">تا ١٠٠ ژمارەی فۆرم و ناوی سیانی تۆمار بکە. کاتێک دوگمەی «ئەکتیڤکردن» دادەگریت، لیستی ئێستای وێبسایتەکە بە تەواوی دەگۆڕدرێت بۆ ئەم لیستە.</p>' +
-      '<div class="adm-scroll"><table class="adm-table"><thead><tr><th>#</th><th>ژمارەی فۆرم</th><th>ناوی سیانی</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '<div class="adm-count" id="adm-count"></div>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<div class="adm-row"><button type="button" class="adm-btn" id="adm-stu-save">💾 پاشەکەوتکردنی لیست</button>' +
-      '<button type="button" class="adm-btn green" id="adm-stu-act">✅ ئەکتیڤکردن</button>' +
-      '<button type="button" class="adm-btn ghost" id="adm-stu-imp">📥 هێنانی لیستی ئێستا</button></div>';
-
-    function count() {
-      var fs = document.querySelectorAll('.adm-f'), ns = document.querySelectorAll('.adm-n'), c = 0;
-      for (var k = 0; k < fs.length; k++) { if (fs[k].value.trim() && ns[k].value.trim()) c++; }
-      $('adm-count').textContent = 'تۆمارکراو: ' + c + ' / 100';
-    }
-    $('adm-pane').addEventListener('input', count);
-    count();
-
-    $('adm-stu-save').addEventListener('click', function () {
-      var res = collectRows();
-      if (res.err) { msg(res.err, false); return; }
-      dbPatch({ draft: res.rows.length ? res.rows : null }).then(function () {
-        QD.draft = res.rows;
-        msg('لیستەکە پاشەکەوت کرا (هێشتا ئەکتیڤ نەکراوە)', true);
-      }).catch(function () { msg('پاشەکەوتکردن سەرنەکەوت', false); });
-    });
-    $('adm-stu-act').addEventListener('click', function () {
-      var res = collectRows();
-      if (res.err) { msg(res.err, false); return; }
-      if (!res.rows.length) { msg('هیچ تۆمارێک نەنووسراوە', false); return; }
-      if (!window.confirm('لیستی ئێستای وێبسایتەکە دەگۆڕدرێت بۆ ' + res.rows.length + ' تۆمار. بەردەوام دەبیت؟')) return;
-      var students = {};
-      res.rows.forEach(function (r) { students[r.f] = r.n; });
-      dbPatch({ draft: res.rows, students: students }).then(function () {
-        var nd = {}; Object.keys(QD).forEach(function (k) { nd[k] = QD[k]; });
-        nd.draft = res.rows; nd.students = students;
-        applyData(nd);
-        msg('ئەکتیڤ کرا. ' + res.rows.length + ' فۆرم و ناو ئێستا کاردەکەن.', true);
-      }).catch(function () { msg('ئەکتیڤکردن سەرنەکەوت', false); });
-    });
-    $('adm-stu-imp').addEventListener('click', function () {
-      var keys = Object.keys(studentForms);
-      var fs = document.querySelectorAll('.adm-f'), ns = document.querySelectorAll('.adm-n');
-      for (var k = 0; k < fs.length; k++) {
-        fs[k].value = keys[k] || '';
-        ns[k].value = keys[k] ? studentForms[keys[k]] : '';
-      }
-      count();
-      msg(keys.length > 100 ? 'تەنها ١٠٠ ی یەکەم هێنرا' : 'لیستی ئێستا هێنرا. دەتوانیت دەستکاری بکەیت.', keys.length <= 100);
-    });
-  }
-  function collectRows() {
-    var fs = document.querySelectorAll('.adm-f'), ns = document.querySelectorAll('.adm-n'), rows = [], seen = {};
-    for (var i = 0; i < fs.length; i++) {
-      var f = normDigits(fs[i].value).replace(/\s+/g, '');
-      var n = ns[i].value.trim().replace(/\s+/g, ' ');
-      if (!f && !n) continue;
-      if (!f || !n) return { err: 'ڕیزی ' + (i + 1) + ': ژمارەی فۆرم و ناو هەردووکیان پێویستن' };
-      if (!/^[0-9]{1,15}$/.test(f)) return { err: 'ڕیزی ' + (i + 1) + ': ژمارەی فۆرم تەنها ژمارە بێت' };
-      if (seen[f]) return { err: 'ڕیزی ' + (i + 1) + ': ژمارەی فۆرم دووبارەیە (' + f + ')' };
-      seen[f] = 1;
-      rows.push({ f: f, n: n });
-    }
-    return { rows: rows };
-  }
-
-  /* ---------- پرسیارەکان ---------- */
-  var LET = { ku: ['A) ', 'B) ', 'C) '], ar: ['أ) ', 'ب) ', 'ج) '], en: ['A) ', 'B) ', 'C) '] };
-
-  function translate(text, tl) {
-    text = (text || '').trim();
-    if (!text) return Promise.resolve('');
-    var g = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=ckb&tl=' + tl + '&dt=t&q=' + encodeURIComponent(text);
-    return fetch(g).then(function (r) { return r.json(); }).then(function (j) {
-      var out = j[0].map(function (x) { return x[0]; }).join('');
-      if (!out) throw new Error('empty');
-      return out;
-    }).catch(function () {
-      var m = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=ckb|' + tl;
-      return fetch(m).then(function (r) { return r.json(); }).then(function (j) {
-        var out = j && j.responseData && j.responseData.translatedText;
-        return out ? out : null;
-      }).catch(function () { return null; });
-    });
-  }
-  function fileToDataUrl(file) {
-    return new Promise(function (res, rej) {
-      var fr = new FileReader();
-      fr.onload = function () {
-        var img = new Image();
-        img.onload = function () {
-          var max = 800, s = Math.min(1, max / Math.max(img.width, img.height));
-          var c = document.createElement('canvas');
-          c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
-          var x = c.getContext('2d');
-          x.fillStyle = '#ffffff'; x.fillRect(0, 0, c.width, c.height);
-          x.drawImage(img, 0, 0, c.width, c.height);
-          res(c.toDataURL('image/jpeg', 0.75));
-        };
-        img.onerror = rej;
-        img.src = fr.result;
-      };
-      fr.onerror = rej;
-      fr.readAsDataURL(file);
-    });
-  }
-
-  var editId = null;
-
-  // لابردنی پیتی A) / B) / أ) لە سەرەتای وەڵامەکان بۆ کاتی دەستکاریکردن
-  function stripLetter(s) {
-    return String(s || '').replace(/^\s*(?:[ABC]|أ|ب|ج)(?:\s*\)|\s+)\s*/, '');
-  }
-
-  // هێنانی ٢٥ پرسیارە ئەسڵییەکە بۆ لیستی پرسیارەکان
-  function importBase() {
-    if (!window.confirm('٢٥ پرسیارە ئەسڵییەکە دەهێنرێن بۆ لیستی پرسیارەکان و دەتوانیت دەستکاریان بکەیت. بەردەوام دەبیت؟')) return;
-    var map = {};
-    Object.keys(QD.questions || {}).forEach(function (k) { map[k] = QD.questions[k]; });
-    questionsBase.forEach(function (q, i) {
-      map['b_' + ('00' + (i + 1)).slice(-3)] = JSON.parse(JSON.stringify(q));
-    });
-    dbPatch({ questions: map, baseImported: true }).then(function () {
-      QD.questions = map; QD.baseImported = true;
-      paneQs();
-      msg('لیستی ئێستا هات. ئێستا دەتوانیت دەستکاری هەر پرسیارێک بکەیت.', true);
-    }).catch(function () { msg('هێنان سەرنەکەوت', false); });
-  }
-
-  function startEdit(id) {
-    paneQs(id);
-    $('adm-overlay').scrollTop = 0;
-  }
-
-  function paneQs(eid) {
-    pendingImg = '';
-    editId = eid || null;
-    var tr = function (lang) {
-      return '<div class="adm-sub">' + (lang === 'ar' ? 'العربية' : 'English') + '</div>' +
-        '<input class="adm-in" id="adm-q-' + lang + '" placeholder="' + (lang === 'ar' ? 'السؤال' : 'Question') + '" style="margin-bottom:6px"/>' +
-        [0, 1, 2].map(function (i) { return '<input class="adm-in" id="adm-a' + i + '-' + lang + '" placeholder="' + LET[lang][i] + '" style="margin-bottom:6px"/>'; }).join('');
-    };
-    $('adm-pane').innerHTML =
-      (QD.baseImported ? '' :
-        '<div class="adm-row" style="margin:0 0 14px"><button type="button" class="adm-btn ghost" id="adm-import">📥 هێنانی لیستی ئێستا (٢٥ پرسیار)</button></div>') +
-      '<div class="adm-warn" id="adm-editbar" style="display:none;margin:0 0 12px">✏️ دەستکاریکردنی پرسیار. دوای گۆڕین دوگمەی پاشەکەوتکردن دابگرە.</div>' +
-      '<div class="adm-field"><label>پرسیار (بە کوردی)</label><textarea class="adm-in" id="adm-q-ku"></textarea></div>' +
-      '<div class="adm-field"><label>وێنە (ئارەزوومەندانە) - لینک</label><input class="adm-in adm-ltr" id="adm-img-url" placeholder="https://..."/></div>' +
-      '<div class="adm-field"><label>یان وێنە ئەپلۆد بکە</label><input type="file" accept="image/*" id="adm-img-file" class="adm-in"/>' +
-      '<img class="adm-prev" id="adm-prev" alt=""/><div><button type="button" class="adm-link" id="adm-img-clear">لابردنی وێنە</button></div></div>' +
-      '<div class="adm-field"><label>وەڵامەکان (بە کوردی، بێ پیتی A/B/C) و وەڵامی ڕاست دیاری بکە</label>' +
-      [0, 1, 2].map(function (i) {
-        return '<div class="adm-opt"><span class="adm-let">' + 'ABC'.charAt(i) + '</span><input class="adm-in" id="adm-a' + i + '-ku"/>' +
-               '<input type="radio" name="adm-correct" class="adm-radio" value="' + i + '" title="وەڵامی ڕاست"/></div>';
-      }).join('') +
-      '<div class="adm-hint">بازنەی (○) لە تەنیشت وەڵامی ڕاست دیاری بکە. ئەم وەڵامە لە کاتی تاقیکردنەوەدا دیار نییە و تەنها لە ئەنجامی کۆتاییدا پیشان دەدرێت.</div></div>' +
-      '<details class="adm-details" id="adm-det"><summary>وەرگێڕانە خۆکارەکان (دەتوانیت دەستکاریان بکەیت)</summary>' + tr('ar') + tr('en') +
-      '<div class="adm-row"><button type="button" class="adm-btn ghost" id="adm-tr-btn">🌐 وەرگێڕانی خۆکار</button></div></details>' +
-      '<div class="adm-msg" id="adm-msg"></div>' +
-      '<div class="adm-row" style="margin-top:0"><button type="button" class="adm-btn green" id="adm-q-save">➕ زیادکردنی پرسیار</button>' +
-      '<button type="button" class="adm-btn ghost" id="adm-edit-cancel" style="display:none">پاشگەزبوونەوە</button></div>' +
-      '<hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:20px 0"/>' +
-      '<div class="adm-title" style="font-size:15px;margin-bottom:10px">لیستی پرسیارەکان</div><div id="adm-qlist"></div>';
-
-    if ($('adm-import')) $('adm-import').addEventListener('click', importBase);
-    $('adm-edit-cancel').addEventListener('click', function () { paneQs(); });
-
-    $('adm-img-file').addEventListener('change', function () {
-      var f = this.files && this.files[0];
-      if (!f) return;
-      fileToDataUrl(f).then(function (u) {
-        pendingImg = u;
-        $('adm-prev').src = u; $('adm-prev').style.display = 'block';
-        $('adm-img-url').value = '';
-      }).catch(function () { msg('وێنەکە نەخوێندرایەوە', false); });
-    });
-    $('adm-img-url').addEventListener('input', function () {
-      var v = this.value.trim();
-      if (v) { pendingImg = ''; $('adm-img-file').value = ''; $('adm-prev').src = v; $('adm-prev').style.display = 'block'; }
-      else { $('adm-prev').style.display = 'none'; }
-    });
-    $('adm-img-clear').addEventListener('click', function () {
-      pendingImg = ''; $('adm-img-file').value = ''; $('adm-img-url').value = '';
-      $('adm-prev').style.display = 'none'; $('adm-prev').removeAttribute('src');
-    });
-    $('adm-tr-btn').addEventListener('click', function () { fillTranslations(true).then(function (ok) { msg(ok ? 'وەرگێڕان تەواو بوو. ئەگەر پێویست بوو ڕاستی بکەرەوە.' : 'وەرگێڕان سەرنەکەوت، دووبارە هەوڵبدەوە یان خۆت بینووسە', ok); }); });
-    $('adm-q-save').addEventListener('click', saveQuestion);
-
-    // ئەگەر دۆخی دەستکاریکردنە، زانیاری پرسیارەکە دەنووسرێتە ناو فۆرمەکە
-    if (editId) {
-      var q = (QD.questions || {})[editId];
-      if (q) {
-        $('adm-editbar').style.display = 'block';
-        $('adm-edit-cancel').style.display = 'inline-block';
-        $('adm-q-save').textContent = '💾 پاشەکەوتکردنی گۆڕانکاری';
-        $('adm-q-ku').value = q.q || '';
-        $('adm-q-ar').value = q.qAr || '';
-        $('adm-q-en').value = q.qEn || '';
-        for (var i = 0; i < 3; i++) {
-          $('adm-a' + i + '-ku').value = stripLetter((q.options || [])[i]);
-          $('adm-a' + i + '-ar').value = stripLetter((q.optionsAr || [])[i]);
-          $('adm-a' + i + '-en').value = stripLetter((q.optionsEn || [])[i]);
-        }
-        var rd = document.querySelector('input[name="adm-correct"][value="' + q.correct + '"]');
-        if (rd) rd.checked = true;
-        if (q.image) {
-          if (/^data:/.test(q.image)) pendingImg = q.image; else $('adm-img-url').value = q.image;
-          $('adm-prev').src = q.image; $('adm-prev').style.display = 'block';
-        }
-      } else { editId = null; }
-    }
-    renderQList();
-  }
-
-  function kuFields() {
-    return {
-      q: $('adm-q-ku').value.trim(),
-      a: [0, 1, 2].map(function (i) { return $('adm-a' + i + '-ku').value.trim(); })
-    };
-  }
-  // دەبێتەوە true ئەگەر هەموو بەشەکان پڕ بوونەوە
-  function fillTranslations(force) {
-    var ku = kuFields();
-    var jobs = [];
-    ['ar', 'en'].forEach(function (lang) {
-      var items = [['adm-q-' + lang, ku.q]].concat([0, 1, 2].map(function (i) { return ['adm-a' + i + '-' + lang, ku.a[i]]; }));
-      items.forEach(function (it) {
-        var el = $(it[0]);
-        if (!force && el.value.trim()) return;
-        jobs.push(translate(it[1], lang).then(function (out) { if (out) el.value = out; }));
-      });
-    });
-    return Promise.all(jobs).then(function () {
-      return ['ar', 'en'].every(function (lang) {
-        return $('adm-q-' + lang).value.trim() && [0, 1, 2].every(function (i) { return $('adm-a' + i + '-' + lang).value.trim(); });
-      });
-    });
-  }
-
-  function saveQuestion() {
-    var ku = kuFields();
-    var radio = document.querySelector('input[name="adm-correct"]:checked');
-    var url = $('adm-img-url').value.trim();
-    if (!ku.q) { msg('پرسیارەکە بنووسە', false); return; }
-    if (!ku.a[0] || !ku.a[1] || !ku.a[2]) { msg('هەر سێ وەڵامەکە بنووسە', false); return; }
-    if (!radio) { msg('وەڵامی ڕاست دیاری بکە', false); return; }
-    if (url && !/^https?:\/\//i.test(url)) { msg('لینکی وێنە دەبێت بە http یان https دەستپێبکات', false); return; }
-    var wasEdit = !!editId;
-    msg('وەرگێڕان و پاشەکەوتکردن ...', true);
-    fillTranslations(false).then(function (ok) {
-      if (!ok) {
-        $('adm-det').open = true;
-        msg('وەرگێڕانی خۆکار سەرنەکەوت. بەشە بەتاڵەکانی وەرگێڕان بە دەست بنووسە یان دووبارە هەوڵبدەوە.', false);
-        return;
-      }
-      var get = function (id) { return $(id).value.trim(); };
-      var obj = {
-        q: ku.q, qAr: get('adm-q-ar'), qEn: get('adm-q-en'),
-        image: pendingImg || url || '',
-        options: ku.a.map(function (t, i) { return LET.ku[i] + t; }),
-        optionsAr: [0, 1, 2].map(function (i) { return LET.ar[i] + get('adm-a' + i + '-ar'); }),
-        optionsEn: [0, 1, 2].map(function (i) { return LET.en[i] + get('adm-a' + i + '-en'); }),
-        correct: Number(radio.value)
-      };
-      var map = {};
-      Object.keys(QD.questions || {}).forEach(function (k) { map[k] = QD.questions[k]; });
-      map[editId || ('q_' + Date.now())] = obj;
-      return dbPatch({ questions: map }).then(function () {
-        QD.questions = map;
-        paneQs();
-        msg(wasEdit ? 'گۆڕانکارییەکان پاشەکەوت کران' : 'پرسیارەکە زیاد کرا', true);
-      });
-    }).catch(function () { msg('پاشەکەوتکردن سەرنەکەوت', false); });
-  }
-
-  function renderQList() {
-    var l = customList(), box = $('adm-qlist');
-    var total = (QD.baseImported ? 0 : questionsBase.length) + l.length;
-    var info = '<div class="adm-count" style="margin:0 0 10px">کۆی پرسیارەکان: ' + total + '</div>' +
-      (total < CFG.QUIZ_SIZE ? '<div class="adm-warn" style="margin:0 0 10px">⚠️ پێویستە لانی کەم ' + CFG.QUIZ_SIZE + ' پرسیار هەبێت بۆ تاقیکردنەوەکە.</div>' : '');
-    if (!l.length) { box.innerHTML = info + '<div class="adm-hint">هێشتا هیچ پرسیارێک لێرە نییە. بۆ دەستکاریکردنی پرسیارە ئەسڵییەکان «هێنانی لیستی ئێستا» دابگرە.</div>'; return; }
-    box.innerHTML = info + l.map(function (q, i) {
-      return '<div class="adm-qitem">' + (q.image ? '<img src="' + esc(q.image) + '" alt=""/>' : '') +
-             '<div class="adm-qinfo">' + (i + 1) + '. ' + esc(q.q) + '<small>وەڵامی ڕاست: ' + 'ABC'.charAt(q.correct) + '</small></div>' +
-             '<div style="display:flex;flex-direction:column;gap:6px">' +
-             '<button type="button" class="adm-btn adm-edit" data-id="' + esc(q.id) + '">دەستکاری</button>' +
-             '<button type="button" class="adm-btn red adm-del" data-id="' + esc(q.id) + '">سڕینەوە</button></div></div>';
-    }).join('');
-    var es = box.querySelectorAll('.adm-edit');
-    for (var e = 0; e < es.length; e++) {
-      es[e].addEventListener('click', function () { startEdit(this.getAttribute('data-id')); });
-    }
-    var ds = box.querySelectorAll('.adm-del');
-    for (var i = 0; i < ds.length; i++) {
-      ds[i].addEventListener('click', function () {
-        var id = this.getAttribute('data-id');
-        if (!window.confirm('ئەم پرسیارە بسڕدرێتەوە؟')) return;
-        var map = {};
-        Object.keys(QD.questions || {}).forEach(function (k) { if (k !== id) map[k] = QD.questions[k]; });
-        var left = Object.keys(map).length;
-        dbPatch({ questions: left ? map : null }).then(function () {
-          QD.questions = left ? map : null;
-          if (editId === id) { paneQs(); } else { renderQList(); }
-          msg('پرسیارەکە سڕایەوە', true);
-        }).catch(function () { msg('سڕینەوە سەرنەکەوت', false); });
-      });
-    }
-  }
-
-  /* ====================== دەستپێکردن ====================== */
-  function init() {
-    var hdr = document.querySelector('.app-header-bar');
-    if (hdr) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'adm-gear';
-      b.title = 'ژووری بەڕێوبەر';
-      b.setAttribute('aria-label', 'ژووری بەڕێوبەر');
-      b.textContent = '⚙️';
-      hdr.appendChild(b);
-      b.addEventListener('click', openAdmin);
-    }
-    refreshData();
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
-
-})();
-//]]>
-</script>
-<!-- ===================== ژووری بەڕێوبەر (Admin Room) : کۆتایی ===================== -->
 
 </body>
 </html>
