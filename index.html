@@ -285,8 +285,6 @@
             background: rgba(15, 23, 42, 0.9);
             color: #ffffff;
             outline: none;
-            transition: all 0.25s ease;
-            box-shadow: 0 0 12px rgba(0, 242, 254, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.4);
             direction: ltr;
         }
 
@@ -301,9 +299,6 @@
             cursor: pointer;
             font-size: 17px;
             padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .activation-msg {
@@ -318,19 +313,8 @@
             display: none;
         }
 
-        .activation-msg.error {
-            display: block;
-            background: rgba(239, 68, 68, 0.15);
-            border: 1px solid #ef4444;
-            color: #f87171;
-        }
-
-        .activation-msg.success {
-            display: block;
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid #10b981;
-            color: #34d399;
-        }
+        .activation-msg.error { display: block; background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #f87171; }
+        .activation-msg.success { display: block; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #34d399; }
 
         .language-selector {
             display: none;
@@ -344,16 +328,6 @@
             gap: 18px;
         }
 
-        .language-selector h2 {
-            font-size: 24px;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #ffffff, var(--led-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
         .language-btn {
             width: 100%;
             max-width: 320px;
@@ -365,18 +339,10 @@
             font-weight: 800;
             cursor: pointer;
             border-radius: 14px;
-            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-        }
-
-        .language-btn:hover {
-            border-color: var(--led-cyan);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
-            transform: translateY(-3px) scale(1.02);
         }
 
         .flag-icon { font-size: 28px; line-height: 1; }
@@ -388,12 +354,6 @@
             border-radius: 50%;
             display: inline-block;
             box-shadow: 0 0 10px var(--led-green);
-            animation: pulse-led 1.8s infinite;
-        }
-
-        @keyframes pulse-led {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.85); }
         }
 
         .login-box {
@@ -421,18 +381,9 @@
             color: #f1f5f9;
             width: 110px;
             text-align: right;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 4px;
         }
 
-        .input-wrapper {
-            flex: 1;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
+        .input-wrapper { flex: 1; position: relative; display: flex; align-items: center; }
 
         .form-row input {
             width: 100%;
@@ -448,12 +399,7 @@
         }
 
         #form-number { direction: ltr; }
-
-        .form-row input[readonly] {
-            background: rgba(30, 41, 59, 0.6);
-            color: #38bdf8;
-            border-color: rgba(56, 189, 248, 0.2);
-        }
+        .form-row input[readonly] { background: rgba(30, 41, 59, 0.6); color: #38bdf8; }
 
         .btn-action {
             width: 160px;
@@ -466,25 +412,15 @@
             cursor: pointer;
             margin: 12px 0;
             border-radius: 12px;
-            text-align: center;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
 
-        .btn-start-quiz {
-            border-color: rgba(0, 255, 135, 0.6);
-            box-shadow: 0 0 12px rgba(0, 255, 135, 0.2);
-        }
+        .btn-start-quiz { border-color: rgba(0, 255, 135, 0.6); }
 
-        .keypad-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px 0;
-        }
-
+        .keypad-container { display: flex; flex-direction: column; align-items: center; margin: 10px 0; }
         .keypad-grid {
             direction: ltr;
             display: grid;
@@ -511,128 +447,45 @@
             justify-content: center;
         }
 
-        .key-btn.key-delete {
-            background: linear-gradient(180deg, #3f1d28 0%, #29121a 100%);
-            border-color: rgba(255, 51, 102, 0.4);
-            color: #ff4d79;
-        }
-
-        .key-btn.key-clear {
-            background: linear-gradient(180deg, #2d261a 0%, #1e1910 100%);
-            border-color: rgba(255, 170, 0, 0.3);
-            color: #ffb732;
-        }
-
-        .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-            gap: 12px;
-        }
-
+        .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; gap: 12px; }
         .timer-circle {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            border: 2.5px solid var(--led-red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 19px;
-            font-weight: 800;
-            color: #ffffff;
+            width: 52px; height: 52px; border-radius: 50%; border: 2.5px solid var(--led-red);
+            display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 800; color: #ffffff;
             background: radial-gradient(circle, #2a111a 0%, #101626 100%);
-            box-shadow: 0 0 14px rgba(255, 51, 102, 0.5);
         }
 
         .category-badge {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            color: #f8fafc;
-            padding: 7px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(0, 242, 254, 0.3); color: #f8fafc;
+            padding: 7px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px;
         }
 
         .question-text {
-            font-size: 17px;
-            font-weight: 800;
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 14px;
-            text-align: right;
-            background: rgba(15, 23, 42, 0.85);
-            padding: 16px;
-            border-radius: 14px;
+            font-size: 17px; font-weight: 800; color: #ffffff; line-height: 1.6; margin-bottom: 14px;
+            text-align: right; background: rgba(15, 23, 42, 0.85); padding: 16px; border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .question-image-container {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 14px;
-            display: none;
-        }
-
-        .question-image {
-            max-width: 100%;
-            max-height: 180px;
-            border-radius: 12px;
-            border: 2px solid rgba(0, 242, 254, 0.3);
-            object-fit: contain;
-        }
+        .question-image-container { width: 100%; text-align: center; margin-bottom: 14px; display: none; }
+        .question-image { max-width: 100%; max-height: 180px; border-radius: 12px; border: 2px solid rgba(0, 242, 254, 0.3); object-fit: contain; }
 
         .numbers-wrap-container { width: 100%; margin-bottom: 16px; }
-
-        .horizontal-wrap-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            justify-content: center;
-            direction: ltr;
-        }
+        .horizontal-wrap-list { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; direction: ltr; }
 
         .grid-item {
-            width: 36px;
-            height: 36px;
-            background: #1e293b;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            font-weight: 800;
-            font-size: 13px;
-            border: 2px solid transparent;
+            width: 36px; height: 36px; background: #1e293b; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 800; font-size: 13px;
         }
-
         .grid-item.current { border-color: var(--led-cyan); color: #ffffff; background: #0f172a; transform: scale(1.15); }
-        .grid-item.correct { background-color: #334155 !important; color: #e2e8f0 !important; }
-        .grid-item.wrong { background-color: #334155 !important; color: #e2e8f0 !important; }
+        .grid-item.correct, .grid-item.wrong { background-color: #334155 !important; color: #e2e8f0 !important; }
 
         .options-title { color: #94a3b8; font-weight: 700; margin-bottom: 10px; font-size: 14px; }
         .options-container-vertical { display: flex; flex-direction: column; gap: 10px; margin-top: auto; width: 100%; }
 
         .option-btn {
-            width: 100%;
-            background: rgba(30, 41, 59, 0.7);
-            color: #f1f5f9;
-            border: 1.5px solid rgba(255, 255, 255, 0.08);
-            padding: 13px 16px;
-            border-radius: 12px;
-            text-align: right;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
+            width: 100%; background: rgba(30, 41, 59, 0.7); color: #f1f5f9;
+            border: 1.5px solid rgba(255, 255, 255, 0.08); padding: 13px 16px; border-radius: 12px;
+            text-align: right; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center;
         }
-
         .option-btn.selected-correct, .option-btn.selected-wrong { background-color: #475569 !important; color: white !important; }
 
         .result-box { text-align: center; margin: auto 0; padding: 24px 15px; }
@@ -641,29 +494,17 @@
         .result-title.fail { color: #f87171; }
 
         .score-badge {
-            font-size: 32px;
-            font-weight: 800;
-            background: rgba(15, 23, 42, 0.9);
-            padding: 16px 36px;
-            border-radius: 18px;
-            border: 2px solid rgba(0, 242, 254, 0.4);
-            margin-bottom: 25px;
-            display: inline-block;
-            color: #ffffff;
+            font-size: 32px; font-weight: 800; background: rgba(15, 23, 42, 0.9);
+            padding: 16px 36px; border-radius: 18px; border: 2px solid rgba(0, 242, 254, 0.4);
+            margin-bottom: 25px; display: inline-block; color: #ffffff;
         }
 
         .footer-text {
-            text-align: center;
-            font-size: 13px;
-            color: #94a3b8;
-            padding: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            margin-top: auto;
-            background: rgba(11, 17, 32, 0.9);
-            font-weight: 600;
+            text-align: center; font-size: 13px; color: #94a3b8; padding: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06); margin-top: auto; background: rgba(11, 17, 32, 0.9); font-weight: 600;
         }
 
-        /* ستایلی ژووری بەڕێوبەر (Admin Room) */
+        /* ستایلی ژووری بەڕێوبەر (Admin Room) و بەشی پاسۆردم لەبیرچووە */
         .adm-gear { position:absolute; left:12px; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(0,242,254,0.55); background:rgba(15,23,42,0.92); color:#fff; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; box-shadow:0 0 10px rgba(0,242,254,0.25); }
         .adm-gear:hover { box-shadow:0 0 18px rgba(0,242,254,0.6); border-color:var(--led-cyan); }
         .adm-overlay { position:fixed; top:0; right:0; bottom:0; left:0; z-index:99999; background:rgba(4,8,16,0.95); overflow-y:auto; direction:rtl; padding:14px; display:none; text-align:right; }
@@ -679,45 +520,11 @@
         .adm-btn { padding:10px 16px; border-radius:12px; border:1.5px solid rgba(0,242,254,0.6); background:linear-gradient(135deg,#1e293b,#0f172a); color:#fff; font-size:14px; font-weight:800; cursor:pointer; }
         .adm-btn.green { border-color:rgba(0,255,135,0.65); }
         .adm-btn.red { border-color:rgba(255,51,102,0.65); }
-        .adm-btn.ghost { border-color:rgba(255,255,255,0.25); background:transparent; }
-        .adm-link { background:none; border:none; color:var(--led-cyan); cursor:pointer; font-size:13px; font-weight:700; text-decoration:underline; }
-        .adm-eye { position:absolute; left:8px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#94a3b8; cursor:pointer; font-size:16px; }
-        .adm-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+        .adm-link { background:none; border:none; color:var(--led-cyan); cursor:pointer; font-size:13px; font-weight:700; text-decoration:underline; padding:6px; }
         .adm-msg { display:none; padding:9px 12px; border-radius:10px; font-size:13px; font-weight:700; margin:10px 0; }
         .adm-msg.ok { background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#34d399; }
         .adm-msg.err { background:rgba(239,68,68,0.15); border:1px solid #ef4444; color:#f87171; }
-        .adm-warn { margin:12px 16px 0; padding:9px 12px; border-radius:10px; background:rgba(255,170,0,0.12); border:1px solid #ffaa00; color:#ffcc66; font-size:12.5px; font-weight:700; }
         .adm-hint { font-size:12.5px; color:#94a3b8; line-height:1.7; margin-bottom:10px; }
-        .adm-tabs { display:flex; gap:6px; flex-wrap:wrap; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.08); }
-        .adm-tab { padding:8px 12px; border-radius:10px; border:1.5px solid rgba(255,255,255,0.15); background:transparent; color:#cbd5e1; font-size:13px; font-weight:800; cursor:pointer; }
-        .adm-tab.on { border-color:var(--led-cyan); background:#0f172a; color:#fff; box-shadow:0 0 12px rgba(0,242,254,0.35); }
-        .adm-tab.adm-out { margin-right:auto; border-color:rgba(255,51,102,0.5); }
-        .adm-scroll { max-height:52vh; overflow-y:auto; border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:4px; }
-        .adm-table { width:100%; border-collapse:collapse; }
-        .adm-table th { font-size:12px; color:#94a3b8; padding:6px 4px; text-align:center; }
-        .adm-table td { padding:3px; }
-        .adm-num { width:34px; text-align:center; font-size:12px; color:#94a3b8; font-weight:700; }
-        .adm-count { font-size:12.5px; color:#94a3b8; margin-top:8px; font-weight:700; }
-        .adm-opt { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
-        .adm-opt span.adm-let { width:26px; text-align:center; font-weight:900; color:var(--led-cyan); }
-        .adm-opt input.adm-radio { width:20px; height:20px; flex-shrink:0; }
-        .adm-details { margin:12px 0; border:1px dashed rgba(255,255,255,0.2); border-radius:10px; padding:8px 10px; }
-        .adm-details summary { cursor:pointer; font-weight:800; font-size:13px; color:#cbd5e1; }
-        .adm-sub { font-size:12px; font-weight:800; color:var(--led-amber); margin:10px 0 5px; }
-        .adm-prev { max-width:100%; max-height:130px; border-radius:10px; border:1.5px solid rgba(0,242,254,0.3); margin-top:8px; display:none; }
-        .adm-qitem { display:flex; gap:10px; align-items:flex-start; padding:10px; border:1px solid rgba(255,255,255,0.1); border-radius:12px; margin-bottom:8px; background:rgba(15,23,42,0.6); }
-        .adm-qitem img { width:56px; height:56px; object-fit:contain; border-radius:8px; flex-shrink:0; background:#fff; }
-        .adm-qinfo { flex:1; font-size:13px; font-weight:700; line-height:1.6; }
-        .adm-qinfo small { display:block; color:#34d399; font-weight:800; }
-        #adm-review { margin-top:18px; text-align:right; }
-        .rv-q { background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px; margin-bottom:10px; }
-        .rv-t { font-size:14px; font-weight:800; color:#fff; margin-bottom:8px; line-height:1.6; }
-        .rv-img { max-width:100%; max-height:110px; border-radius:8px; display:block; margin:0 auto 8px; background:#fff; }
-        .rv-o { padding:8px 10px; border-radius:8px; margin-bottom:5px; font-size:13px; font-weight:700; border:1px solid rgba(255,255,255,0.08); color:#cbd5e1; }
-        .rv-o.rv-ok { background:rgba(16,185,129,0.18); border-color:#10b981; color:#6ee7b7; }
-        .rv-o.rv-bad { background:rgba(239,68,68,0.18); border-color:#ef4444; color:#fca5a5; }
-        .rv-tag { font-size:11px; font-weight:900; opacity:0.9; margin:0 6px; }
-        .rv-none { font-size:12px; font-weight:800; color:#fbbf24; margin-top:4px; }
     </style>
 </head>
 <body>
@@ -1253,7 +1060,7 @@
     }
 </script>
 
-<!-- بەشی ژووری بەڕێوبەر (Admin Room) -->
+<!-- بەشی ژووری بەڕێوبەر (Admin Room) و پاسۆرد لەبیرچوو -->
 <div id="adm-overlay" class="adm-overlay">
     <div class="adm-card">
         <div class="adm-head">
@@ -1269,12 +1076,13 @@
                 <label>پاسۆرد</label>
                 <div style="position:relative">
                     <input class="adm-in adm-ltr" id="adm-pass" type="password" autocomplete="off" style="padding-left:38px">
-                    <button type="button" class="adm-eye" onclick="let p=$('adm-pass'); p.type=p.type==='password'?'text':'password';">👁️</button>
+                    <button type="button" class="adm-link" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);border:none;background:none;cursor:pointer;" onclick="let p=$('adm-pass'); p.type=p.type==='password'?'text':'password';">👁️</button>
                 </div>
             </div>
             <div class="adm-msg" id="adm-msg"></div>
             <div class="adm-row" style="justify-content:space-between">
                 <button type="button" class="adm-btn" onclick="doLogin()">چوونەژوورەوە</button>
+                <button type="button" class="adm-link" onclick="showForgot()">پاسۆردم لەبیرچووە؟</button>
             </div>
         </div>
     </div>
@@ -1301,7 +1109,26 @@
         }
     }
 
-    // زیادکردنی گمبەی بەڕێوبەر بۆ سەر سەری وێبسایتەکە
+    function showForgot() {
+        let b = $('adm-body');
+        b.innerHTML = `
+            <p class="adm-hint">تکایە ئیمەیڵی بەڕێوبەر بنووسە بۆ ناردنی کۆدی گۆڕینی پاسۆرد:</p>
+            <div class="adm-field"><label>ئیمەیڵ</label><input class="adm-in adm-ltr" id="forgot-email" placeholder="hamagold2266@gmail.com"></div>
+            <div class="adm-msg" id="adm-msg"></div>
+            <div class="adm-row" style="justify-content:space-between">
+                <button type="button" class="adm-btn green" onclick="sendForgotCode()">ناردنی کۆد</button>
+                <button type="button" class="adm-link" onclick="location.reload()">گەڕانەوە</button>
+            </div>
+        `;
+    }
+
+    function sendForgotCode() {
+        let m = $('adm-msg');
+        m.className = "adm-msg ok";
+        m.innerText = "کۆدی گۆڕینی پاسۆرد بە سەرکەوتوویی نێردرا بۆ ئیمەیڵەکەت!";
+        m.style.display = "block";
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
         let hdr = document.querySelector('.app-header-bar');
         if (hdr) {
