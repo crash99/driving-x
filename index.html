@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تاقیکردنەوەی تیۆری هاتوچۆ</title>
+    <title>تاقیکردنەوەی تیۆری هاتووچۆ</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -61,15 +61,7 @@
             height: 250%;
             top: -75%;
             left: -75%;
-            background: conic-gradient(
-                from 0deg,
-                var(--led-cyan),
-                var(--led-blue),
-                var(--led-pink),
-                var(--led-amber),
-                var(--led-green),
-                var(--led-cyan)
-            );
+            background: conic-gradient(from 0deg, var(--led-cyan), var(--led-blue), var(--led-pink), var(--led-amber), var(--led-green), var(--led-cyan));
             animation: rotate-led 4s linear infinite;
             z-index: 1;
             filter: blur(5px);
@@ -81,15 +73,7 @@
             height: 250%;
             top: -75%;
             left: -75%;
-            background: conic-gradient(
-                from 180deg,
-                var(--led-pink),
-                var(--led-cyan),
-                var(--led-green),
-                var(--led-amber),
-                var(--led-blue),
-                var(--led-pink)
-            );
+            background: conic-gradient(from 180deg, var(--led-pink), var(--led-cyan), var(--led-green), var(--led-amber), var(--led-blue), var(--led-pink));
             animation: rotate-led 6s linear infinite reverse;
             z-index: 1;
             filter: blur(14px);
@@ -214,13 +198,7 @@
             font-size: 48px;
             font-weight: 900;
             text-align: center;
-            background: linear-gradient(
-                90deg,
-                var(--led-cyan),
-                var(--led-pink),
-                var(--led-green),
-                var(--led-cyan)
-            );
+            background: linear-gradient(90deg, var(--led-cyan), var(--led-pink), var(--led-green), var(--led-cyan));
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -312,11 +290,6 @@
             direction: ltr;
         }
 
-        .activation-input-wrap input:focus {
-            border-color: var(--led-cyan);
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.4);
-        }
-
         .toggle-pwd-btn {
             position: absolute;
             left: 10px;
@@ -331,10 +304,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.2s;
         }
-
-        .toggle-pwd-btn:hover { color: #ffffff; }
 
         .activation-msg {
             width: 100%;
@@ -346,8 +316,6 @@
             border-radius: 8px;
             margin-bottom: 14px;
             display: none;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
         }
 
         .activation-msg.error {
@@ -355,7 +323,6 @@
             background: rgba(239, 68, 68, 0.15);
             border: 1px solid #ef4444;
             color: #f87171;
-            box-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
         }
 
         .activation-msg.success {
@@ -363,7 +330,6 @@
             background: rgba(16, 185, 129, 0.15);
             border: 1px solid #10b981;
             color: #34d399;
-            box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
         }
 
         .language-selector {
@@ -400,7 +366,6 @@
             cursor: pointer;
             border-radius: 14px;
             text-align: center;
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -412,7 +377,6 @@
             border-color: var(--led-cyan);
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
             transform: translateY(-3px) scale(1.02);
-            background: linear-gradient(135deg, #25334d, #14203a);
         }
 
         .flag-icon { font-size: 28px; line-height: 1; }
@@ -428,8 +392,8 @@
         }
 
         @keyframes pulse-led {
-            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px var(--led-green); }
-            50% { opacity: 0.4; transform: scale(0.85); box-shadow: 0 0 4px var(--led-green); }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
         }
 
         .login-box {
@@ -481,23 +445,14 @@
             background: rgba(15, 23, 42, 0.85);
             color: #ffffff;
             outline: none;
-            transition: all 0.25s ease;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         #form-number { direction: ltr; }
-
-        .form-row input:focus {
-            border-color: var(--led-cyan);
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.35), inset 0 2px 4px rgba(0, 0, 0, 0.4);
-            background: rgba(15, 23, 42, 0.95);
-        }
 
         .form-row input[readonly] {
             background: rgba(30, 41, 59, 0.6);
             color: #38bdf8;
             border-color: rgba(56, 189, 248, 0.2);
-            cursor: default;
         }
 
         .btn-action {
@@ -512,31 +467,15 @@
             margin: 12px 0;
             border-radius: 12px;
             text-align: center;
-            transition: all 0.25s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
 
-        .btn-action:hover {
-            border-color: var(--led-cyan);
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #25334d, #14203a);
-        }
-
         .btn-start-quiz {
             border-color: rgba(0, 255, 135, 0.6);
             box-shadow: 0 0 12px rgba(0, 255, 135, 0.2);
-        }
-
-        .btn-start-quiz:hover {
-            border-color: var(--led-green);
-            box-shadow: 0 0 20px rgba(0, 255, 135, 0.5);
         }
 
         .keypad-container {
@@ -556,7 +495,6 @@
             border: 1.5px solid rgba(255, 255, 255, 0.08);
             width: 230px;
             border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
         }
 
         .key-btn {
@@ -571,17 +509,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            user-select: none;
-            transition: all 0.15s ease;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .key-btn:hover {
-            background: linear-gradient(180deg, #2b3952 0%, #1c273e 100%);
-            border-color: rgba(0, 242, 254, 0.5);
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
-            color: var(--led-cyan);
-            transform: translateY(-1px);
         }
 
         .key-btn.key-delete {
@@ -617,13 +544,6 @@
             color: #ffffff;
             background: radial-gradient(circle, #2a111a 0%, #101626 100%);
             box-shadow: 0 0 14px rgba(255, 51, 102, 0.5);
-            flex-shrink: 0;
-            animation: timer-pulse 1s infinite alternate;
-        }
-
-        @keyframes timer-pulse {
-            0% { box-shadow: 0 0 8px rgba(255, 51, 102, 0.4); }
-            100% { box-shadow: 0 0 18px rgba(255, 51, 102, 0.8); }
         }
 
         .category-badge {
@@ -637,8 +557,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
-            flex-shrink: 0;
         }
 
         .question-text {
@@ -652,7 +570,6 @@
             padding: 16px;
             border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .question-image-container {
@@ -667,14 +584,10 @@
             max-height: 180px;
             border-radius: 12px;
             border: 2px solid rgba(0, 242, 254, 0.3);
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
             object-fit: contain;
         }
 
-        .numbers-wrap-container {
-            width: 100%;
-            margin-bottom: 16px;
-        }
+        .numbers-wrap-container { width: 100%; margin-bottom: 16px; }
 
         .horizontal-wrap-list {
             display: flex;
@@ -696,36 +609,14 @@
             font-weight: 800;
             font-size: 13px;
             border: 2px solid transparent;
-            transition: all 0.25s;
-            flex-shrink: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        .grid-item.current {
-            border-color: var(--led-cyan);
-            color: #ffffff;
-            background: #0f172a;
-            transform: scale(1.15);
-            box-shadow: 0 0 12px var(--led-cyan);
-        }
-
+        .grid-item.current { border-color: var(--led-cyan); color: #ffffff; background: #0f172a; transform: scale(1.15); }
         .grid-item.correct { background-color: #334155 !important; color: #e2e8f0 !important; }
         .grid-item.wrong { background-color: #334155 !important; color: #e2e8f0 !important; }
 
-        .options-title {
-            color: #94a3b8;
-            font-weight: 700;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-
-        .options-container-vertical {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: auto;
-            width: 100%;
-        }
+        .options-title { color: #94a3b8; font-weight: 700; margin-bottom: 10px; font-size: 14px; }
+        .options-container-vertical { display: flex; flex-direction: column; gap: 10px; margin-top: auto; width: 100%; }
 
         .option-btn {
             width: 100%;
@@ -738,39 +629,16 @@
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .option-btn:hover {
-            background: rgba(45, 60, 85, 0.85);
-            border-color: rgba(0, 242, 254, 0.4);
-            box-shadow: 0 0 12px rgba(0, 242, 254, 0.25);
-            transform: translateX(-3px);
-        }
+        .option-btn.selected-correct, .option-btn.selected-wrong { background-color: #475569 !important; color: white !important; }
 
-        .option-btn.selected-correct, .option-btn.selected-wrong {
-            background-color: #475569 !important;
-            color: white !important;
-        }
-
-        .result-box {
-            text-align: center;
-            margin: auto 0;
-            padding: 24px 15px;
-        }
-
-        .result-title {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-
-        .result-title.pass { color: #4ade80; text-shadow: 0 0 15px rgba(74, 222, 128, 0.4); }
-        .result-title.fail { color: #f87171; text-shadow: 0 0 15px rgba(248, 113, 113, 0.4); }
+        .result-box { text-align: center; margin: auto 0; padding: 24px 15px; }
+        .result-title { font-size: 22px; font-weight: 800; margin-bottom: 16px; line-height: 1.6; }
+        .result-title.pass { color: #4ade80; }
+        .result-title.fail { color: #f87171; }
 
         .score-badge {
             font-size: 32px;
@@ -781,7 +649,6 @@
             border: 2px solid rgba(0, 242, 254, 0.4);
             margin-bottom: 25px;
             display: inline-block;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
             color: #ffffff;
         }
 
@@ -795,6 +662,62 @@
             background: rgba(11, 17, 32, 0.9);
             font-weight: 600;
         }
+
+        /* ستایلی ژووری بەڕێوبەر (Admin Room) */
+        .adm-gear { position:absolute; left:12px; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(0,242,254,0.55); background:rgba(15,23,42,0.92); color:#fff; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; box-shadow:0 0 10px rgba(0,242,254,0.25); }
+        .adm-gear:hover { box-shadow:0 0 18px rgba(0,242,254,0.6); border-color:var(--led-cyan); }
+        .adm-overlay { position:fixed; top:0; right:0; bottom:0; left:0; z-index:99999; background:rgba(4,8,16,0.95); overflow-y:auto; direction:rtl; padding:14px; display:none; text-align:right; }
+        .adm-card { max-width:640px; margin:0 auto; background:#0e1628; border:1.5px solid rgba(0,242,254,0.45); border-radius:20px; box-shadow:0 0 30px rgba(0,242,254,0.25); color:#f8fafc; overflow:hidden; }
+        .adm-head { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(11,17,32,0.9); }
+        .adm-title { font-size:17px; font-weight:800; }
+        .adm-x { width:34px; height:34px; border-radius:50%; border:1.5px solid rgba(255,51,102,0.6); background:rgba(63,29,40,0.8); color:#fff; font-size:16px; cursor:pointer; padding:0; }
+        .adm-pad { padding:18px 16px; }
+        .adm-field { margin-bottom:12px; }
+        .adm-field label { display:block; font-size:13px; font-weight:700; color:#cbd5e1; margin-bottom:5px; }
+        .adm-in { width:100%; padding:10px 12px; border:1.5px solid rgba(255,255,255,0.15); border-radius:10px; background:rgba(15,23,42,0.9); color:#fff; font-size:15px; font-weight:600; outline:none; }
+        .adm-ltr { direction:ltr; text-align:left; }
+        .adm-btn { padding:10px 16px; border-radius:12px; border:1.5px solid rgba(0,242,254,0.6); background:linear-gradient(135deg,#1e293b,#0f172a); color:#fff; font-size:14px; font-weight:800; cursor:pointer; }
+        .adm-btn.green { border-color:rgba(0,255,135,0.65); }
+        .adm-btn.red { border-color:rgba(255,51,102,0.65); }
+        .adm-btn.ghost { border-color:rgba(255,255,255,0.25); background:transparent; }
+        .adm-link { background:none; border:none; color:var(--led-cyan); cursor:pointer; font-size:13px; font-weight:700; text-decoration:underline; }
+        .adm-eye { position:absolute; left:8px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#94a3b8; cursor:pointer; font-size:16px; }
+        .adm-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+        .adm-msg { display:none; padding:9px 12px; border-radius:10px; font-size:13px; font-weight:700; margin:10px 0; }
+        .adm-msg.ok { background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#34d399; }
+        .adm-msg.err { background:rgba(239,68,68,0.15); border:1px solid #ef4444; color:#f87171; }
+        .adm-warn { margin:12px 16px 0; padding:9px 12px; border-radius:10px; background:rgba(255,170,0,0.12); border:1px solid #ffaa00; color:#ffcc66; font-size:12.5px; font-weight:700; }
+        .adm-hint { font-size:12.5px; color:#94a3b8; line-height:1.7; margin-bottom:10px; }
+        .adm-tabs { display:flex; gap:6px; flex-wrap:wrap; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.08); }
+        .adm-tab { padding:8px 12px; border-radius:10px; border:1.5px solid rgba(255,255,255,0.15); background:transparent; color:#cbd5e1; font-size:13px; font-weight:800; cursor:pointer; }
+        .adm-tab.on { border-color:var(--led-cyan); background:#0f172a; color:#fff; box-shadow:0 0 12px rgba(0,242,254,0.35); }
+        .adm-tab.adm-out { margin-right:auto; border-color:rgba(255,51,102,0.5); }
+        .adm-scroll { max-height:52vh; overflow-y:auto; border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:4px; }
+        .adm-table { width:100%; border-collapse:collapse; }
+        .adm-table th { font-size:12px; color:#94a3b8; padding:6px 4px; text-align:center; }
+        .adm-table td { padding:3px; }
+        .adm-num { width:34px; text-align:center; font-size:12px; color:#94a3b8; font-weight:700; }
+        .adm-count { font-size:12.5px; color:#94a3b8; margin-top:8px; font-weight:700; }
+        .adm-opt { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+        .adm-opt span.adm-let { width:26px; text-align:center; font-weight:900; color:var(--led-cyan); }
+        .adm-opt input.adm-radio { width:20px; height:20px; flex-shrink:0; }
+        .adm-details { margin:12px 0; border:1px dashed rgba(255,255,255,0.2); border-radius:10px; padding:8px 10px; }
+        .adm-details summary { cursor:pointer; font-weight:800; font-size:13px; color:#cbd5e1; }
+        .adm-sub { font-size:12px; font-weight:800; color:var(--led-amber); margin:10px 0 5px; }
+        .adm-prev { max-width:100%; max-height:130px; border-radius:10px; border:1.5px solid rgba(0,242,254,0.3); margin-top:8px; display:none; }
+        .adm-qitem { display:flex; gap:10px; align-items:flex-start; padding:10px; border:1px solid rgba(255,255,255,0.1); border-radius:12px; margin-bottom:8px; background:rgba(15,23,42,0.6); }
+        .adm-qitem img { width:56px; height:56px; object-fit:contain; border-radius:8px; flex-shrink:0; background:#fff; }
+        .adm-qinfo { flex:1; font-size:13px; font-weight:700; line-height:1.6; }
+        .adm-qinfo small { display:block; color:#34d399; font-weight:800; }
+        #adm-review { margin-top:18px; text-align:right; }
+        .rv-q { background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px; margin-bottom:10px; }
+        .rv-t { font-size:14px; font-weight:800; color:#fff; margin-bottom:8px; line-height:1.6; }
+        .rv-img { max-width:100%; max-height:110px; border-radius:8px; display:block; margin:0 auto 8px; background:#fff; }
+        .rv-o { padding:8px 10px; border-radius:8px; margin-bottom:5px; font-size:13px; font-weight:700; border:1px solid rgba(255,255,255,0.08); color:#cbd5e1; }
+        .rv-o.rv-ok { background:rgba(16,185,129,0.18); border-color:#10b981; color:#6ee7b7; }
+        .rv-o.rv-bad { background:rgba(239,68,68,0.18); border-color:#ef4444; color:#fca5a5; }
+        .rv-tag { font-size:11px; font-weight:900; opacity:0.9; margin:0 6px; }
+        .rv-none { font-size:12px; font-weight:800; color:#fbbf24; margin-top:4px; }
     </style>
 </head>
 <body>
@@ -1077,6 +1000,46 @@
             optionsAr: ["أ) ارتفاع درجة حرارة المحرك", "ب) ربط حزام الأمان", "ج) مشكلة في زيت المحرك"],
             optionsEn: ["A) Engine temperature rising", "B) Fasten seatbelt", "C) Engine oil problem"],
             correct: 0
+        },
+        {
+            q: "شێوازی بەستنی پشتێنی سەلامەتی بۆ ژنی دووگیان؟",
+            qAr: "طريقة ربط حزام الأمان للمرأة الحامل؟",
+            qEn: "How to fasten a seatbelt for a pregnant woman?",
+            image: "https://www.image2url.com/r2/default/images/1790605101564-ccfe4498-af21-4e50-8acb-d854ef7fe727.png",
+            options: ["A) بە شێوەی وێنەی ژمارە یەک", "B) بە شێوەی وێنەی ژمارە دوو", "C) پێویست بە خۆبەستنەوە ناکات"],
+            optionsAr: ["أ) بطريقة الصورة الأولى", "ب) بطريقة الصورة الثانية", "ج) لا حاجة لربطه"],
+            optionsEn: ["A) As shown in picture one", "B) As shown in picture two", "C) No need to fasten"],
+            correct: 0
+        },
+        {
+            q: "لە چ شوێنێک لێخوڕینی ئۆتۆمبێل بە عەرەبانەوە مەترسیدارە؟",
+            qAr: "في أي مكان يكون سحب السيارة بمقطورة خطيراً؟",
+            qEn: "Where is it dangerous to tow a vehicle with a trailer?",
+            image: "https://www.image2url.com/r2/default/images/1790605501582-0cad9749-c063-4128-863e-f87d239b048c.png",
+            options: ["A) لە هەوراز، نشێو، پێچ", "B) لە ڕێگای ڕاستەوڕاست", "C) تەنها لە نشێو"],
+            optionsAr: ["أ) في الصعود والنزول والمنعطفات", "ب) في الطريق المستقيم", "ج) فقط في النزول"],
+            optionsEn: ["A) On hills, descents, and turns", "B) On a straight road", "C) Only on descents"],
+            correct: 0
+        },
+        {
+            q: "تا چێ تمەنێک پێویستە منداڵ لەسەر کوشنی تایبەت بەمنداڵ دابنرێت؟",
+            qAr: "حتى أي عمر يجب وضع الطفل على مقعد خاص بالأطفال؟",
+            qEn: "Until what age should a child be placed in a special child seat?",
+            image: "https://www.image2url.com/r2/default/images/1791359847375-ce1b0515-0179-4770-b513-5a14d88a26b8.png",
+            options: ["A) تا تەمەنی 10 ساڵ", "B) تا تەمەنی 8 ساڵ", "C) تا تەمەنی 13 ساڵ"],
+            optionsAr: ["أ) حتى سن 10 سنوات", "ب) حتى سن 8 سنوات", "ج) حتى سن 13 سنة"],
+            optionsEn: ["A) Until age 10", "B) Until age 8", "C) Until age 13"],
+            correct: 2
+        },
+        {
+            q: "بۆچی سەرخۆش پیادەیەکی مەترسیدارە؟",
+            qAr: "لماذا يكون المشاة السكارى خطرين؟",
+            qEn: "Why are drunk pedestrians dangerous?",
+            image: "https://www.image2url.com/r2/default/images/1791376043829-42cd788f-bb6e-4de2-9343-843fc2d9ca57.png",
+            options: ["A) بەهۆی بااڵی کورتیانەوە", "B) چوونکە ناتوانن کۆنتڕۆلی خۆیان بکەن", "C) بەهۆی جوڵەی خێرایانەوە"],
+            optionsAr: ["أ) بسبب انخفاض الانتباه", "ب) لأنهم لا يستطيعون التحكم بأنفسهم", "ج) بسبب حركتهم السريعة"],
+            optionsEn: ["A) Due to reduced attention", "B) Because they cannot control themselves", "C) Due to their fast movement"],
+            correct: 1
         }
     ];
 
@@ -1131,7 +1094,10 @@
         "95577": "دنیا محمد قادر",
         "94097": "ایرج نجف کیامینش",
         "92651": "ئاسۆ اسکندر رحمان",
-        "94411": "محمد عمر جلال"
+        "94411": "محمد عمر جلال",
+        "94387": "مەبەست سعید محمد",
+        "38474": "دیاری بارزان قادر",
+        "94645": "ایاد سامان علی"
     };
 
     function searchForm() {
@@ -1285,6 +1251,69 @@
         document.getElementById('form-number').value = '';
         document.getElementById('full-name').value = '';
     }
+</script>
+
+<!-- بەشی ژووری بەڕێوبەر (Admin Room) -->
+<div id="adm-overlay" class="adm-overlay">
+    <div class="adm-card">
+        <div class="adm-head">
+            <div class="adm-title" id="adm-title">ژووری بەڕێوبەر</div>
+            <button type="button" class="adm-x" onclick="closeAdmin()">✕</button>
+        </div>
+        <div id="adm-body" class="adm-pad">
+            <div class="adm-field">
+                <label>ناوی بەکارهێنەر</label>
+                <input class="adm-in adm-ltr" id="adm-user" autocomplete="off">
+            </div>
+            <div class="adm-field">
+                <label>پاسۆرد</label>
+                <div style="position:relative">
+                    <input class="adm-in adm-ltr" id="adm-pass" type="password" autocomplete="off" style="padding-left:38px">
+                    <button type="button" class="adm-eye" onclick="let p=$('adm-pass'); p.type=p.type==='password'?'text':'password';">👁️</button>
+                </div>
+            </div>
+            <div class="adm-msg" id="adm-msg"></div>
+            <div class="adm-row" style="justify-content:space-between">
+                <button type="button" class="adm-btn" onclick="doLogin()">چوونەژوورەوە</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function $(id) { return document.getElementById(id); }
+    function openAdmin() { $('adm-overlay').style.display = 'block'; }
+    function closeAdmin() { $('adm-overlay').style.display = 'none'; }
+    
+    function doLogin() {
+        let u = $('adm-user').value.trim();
+        let p = $('adm-pass').value;
+        let m = $('adm-msg');
+        if(u === "crash_cr4" && p === "crash2026") {
+            m.className = "adm-msg ok";
+            m.innerText = "بە سەرکەوتوویی چوویە ژوورەوە!";
+            m.style.display = "block";
+            setTimeout(() => { closeAdmin(); alert("بەڕێوبەر: لێرەدا دەتوانیت کۆنتڕۆڵی سیستەم بکەیت."); }, 800);
+        } else {
+            m.className = "adm-msg err";
+            m.innerText = "ناوی بەکارهێنەر یان پاسۆرد هەڵەیە!";
+            m.style.display = "block";
+        }
+    }
+
+    // زیادکردنی گمبەی بەڕێوبەر بۆ سەر سەری وێبسایتەکە
+    window.addEventListener('DOMContentLoaded', () => {
+        let hdr = document.querySelector('.app-header-bar');
+        if (hdr) {
+            let b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'adm-gear';
+            b.title = 'ژووری بەڕێوبەر';
+            b.innerHTML = '⚙️';
+            hdr.appendChild(b);
+            b.addEventListener('click', openAdmin);
+        }
+    });
 </script>
 
 </body>
